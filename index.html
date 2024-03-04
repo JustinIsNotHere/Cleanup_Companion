@@ -11,17 +11,67 @@
     </head>  
     <body>
         <section class="container">
-            <header>Cleanup Data Form</header>
+            <header>Volunteer Information</header>
             <form action="#" class="form">
                 <div class="input-box">
                     <label>Name:</label>
-                    <input type="text" placeholder="Enter full name"/>
+                    <input type="text" placeholder="Enter first then last name" required/>
                 </div>
+
                 <div class="input-box">
-                    <label>Name:</label>
-                    <input type="text" placeholder="Enter full name"/>
+                    <label>Email Address:</label>
+                    <input type="text" placeholder="Enter valid email" required/>
                 </div>
+            <div class = "column"> 
+                <div class="input-box">
+                    <label>Hometown City:</label>
+                    <input type="text" placeholder="Enter the city where you live"/>
+                </div>
+
+                <div class="input-box">
+                    <label>Zipcode:</label>
+                    <input type="text" placeholder="Enter your zipcode"/>
+                </div>
+            </div>
+            </form>
+            <header>Cleanup Site Information</header>
+            <form action="#" class="form">
+                <div class="input-box">
+                    <label>Site Name:</label>
+                    <input type="text" placeholder="Enter name of the cleanup site" required/>
+                </div>
+
+            <div class = "column"> 
+                <div class="input-box">
+                    <label>Site City:</label>
+                    <input type="text" placeholder="Enter cleanup site city"/>
+                </div>
+
+                <div class="input-box">
+                    <label>Site County:</label>
+                    <input type="text" placeholder="Enter cleanup site county"/>
+                </div>
+            </div>
+
+            <div class="gender-box">
+                <h3>Gender</h3>
+                <div class="gender-option"
+                    <div class="gender">
+                        <input type="radio" id="check-male" name="gender" checked/>
+                        <label for="check-male">Male</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="checkfemale" name="gender" checked/>
+                        <label for="check-female">Female</label>
+                    </div>
+                    <div class="gender">
+                        <input type="radio" id="check" name="gender" checked/>
+                        <label for="check-other">Prefer Not</label>
+                    </div>
+                </div> 
+            </div>
             </form>
         </section>
     </body>
+
 </html>
