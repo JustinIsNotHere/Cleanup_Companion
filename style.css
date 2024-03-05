@@ -68,8 +68,80 @@
     column-gap: 15px;
   }
 
-  .form :where(.gender-option, .gender){
-    display:flex;
-    align-items: center;
-    column-gap: 50px
+
+  .dropdown {
+    width: 200px;
+    margin: 20px auto;
+}
+
+.dropdown select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+  .form .type-box {
+    margin-top: 20px;
+  }
+
+  .type-box h3{
+    color: #333; 
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .site-option {
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+
+
+
+  .form .sitetype {
+    column-gap: 5px; 
+  }
+  .form :where(.sitetype input, .sitetype label) {
+    cursor: pointer;
+  }
+
+  .form-row {
+    display: flex;
+}
+
+.dropdown, .date-picker {
+    width: 50%;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+
+
+.dropdown select, .date-picker input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+
+
+  /*Responsive */
+  @media screen and (max-width: 500px){
+    .form .column {
+      flex-wrap: wrap;
+    }
+    .form :where(.site-option, .sitetype){
+      row-gap: 15 px;
+    }
   }
