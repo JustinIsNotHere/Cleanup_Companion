@@ -133,7 +133,15 @@ label {
     margin-bottom: 20px;
 }
 
+h2 {
+  font-size: 1.2em; 
 
+.item {
+  display: flex; 
+  justify-content: space-between; 
+  margin-bottom: 1em; 
+}
+}
 
 
   /*Responsive */
