@@ -136,13 +136,12 @@ label {
 
 h2 {
   font-size: 1.2em; 
+}
 
-.item {
-  display: flex; 
-  justify-content: space-between; 
-  margin-bottom: 1em; 
+label[for="metalInputs"] {
+  margin-top: 40px;
 }
-}
+
 
 
   /*Responsive */
