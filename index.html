@@ -11,6 +11,8 @@
     </head>  
     <body>
         <section class="container">
+            
+            <fieldset>
             <header>Volunteer Information</header>
             <form action="#" class="form">
                 <div class="input-box">
@@ -33,7 +35,10 @@
                     <input type="text" placeholder="Enter your zipcode"/>
                 </div>
             </div>
+        </fieldset>
             </form>
+
+            <fieldset>
             <header>Cleanup Site Information</header>
             <form action="#" class="form">
                 <div class="input-box">
@@ -138,7 +143,10 @@
                     </div>
                 </div> 
             </div>
-
+            </fieldset>
+            </form>
+           
+            <fieldset>
             <header>Volunteer Data Input</header>
             <label><b>Plastic</b></label>
             
@@ -156,6 +164,12 @@
             
                 <label for="plasticbags">Plastic Bags:</label>
                 <input type="number" id="plasticbags" name="plasticbags" min="0">
+            
+                <label for="other">Other Plastic:</label>
+                <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
+                
+               
+            
             </div>
             
             <div class="input-box">
@@ -172,6 +186,9 @@
             
                 <label for="syringes">Syringes:</label>
                 <input type="number" id="syringes" name="syringes" min="0">
+
+                <label for="customamount">Amount:</label>
+                <input type="number" id="customamount" name="customamount" min="0" step="1">
             </div>
             </div>
         </form>
@@ -192,6 +209,10 @@
         
             <label for="fishinghooks">Fishing Hooks:</label>
             <input type="number" id="fishinghooks" name="fishinghooks" min="0">
+        
+            <label for="other">Other Metal:</label>
+            <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
+        
         </div>
         
         <div class="input-box">
@@ -205,7 +226,10 @@
             <input type="number" id="wire" name="wire" min="0">
         
             <label for="poptabs">Pop Tabs:</label>
-            <input type="number" id="poptabs" name="poptabs" min="0">   
+            <input type="number" id="poptabs" name="poptabs" min="0">
+
+            <label for="customamount">Amount:</label>
+            <input type="number" id="customamount" name="customamount" min="0" step="1">
         </div>
         </div>
         </form>
@@ -229,6 +253,9 @@
 
         <label for="recipts">Recipts:</label>
         <input type="number" id="recipts" name="recipts" min="0">
+        
+        <label for="other">Other Paper:</label>
+        <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
     </div>
     
     <div class="input-box">
@@ -246,6 +273,9 @@
         
         <label for="napkins">Napkins:</label>
         <input type="number" id="napkins" name="napkins" min="0"> 
+
+        <label for="customamount">Amount:</label>
+        <input type="number" id="customamount" name="customamount" min="0" step="1">
     </div>
     </div>
     </form>
@@ -269,6 +299,9 @@
 
         <label for="wood">Wood Piece:</label>
         <input type="number" id="wood" name="wood" min="0">
+
+        <label for="other">Other Miscellaneous:</label>
+        <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
     </div>
     
     <div class="input-box">
@@ -286,8 +319,12 @@
         
         <label for="glass">Glass Piece:</label>
         <input type="number" id="glass" name="glass" min="0"> 
+
+        <label for="customamount">Amount:</label>
+        <input type="number" id="customamount" name="customamount" min="0" step="1">
     </div>
     </div>
+</fieldset>
     </form>
 </div>
 

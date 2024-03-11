@@ -142,7 +142,12 @@ label[for="metalInputs"] {
   margin-top: 40px;
 }
 
-
+fieldset {
+  border: 2px solid #ccc;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
 
   /*Responsive */
   @media screen and (max-width: 500px){
