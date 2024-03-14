@@ -22,11 +22,19 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("Enter into registration(name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, plasticutensils, plasticbags, candywrappers,) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, plasticutensils, plasticbags, candywrappers,) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, $cleanuptype, $waterbottles, $bottlecaps, $plasticutensils, $plasticbags, $candywrappers);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Information successfully...";
+
+		$sql = "CREATE DATABASE myDB";
+	if ($conn->query($sql) === TRUE) {
+  		echo "Database created successfully";
+	} else {
+  		echo "Error creating database: " . $conn->error;
+	}
+
 		$stmt->close();
 		$conn->close();
 	}
