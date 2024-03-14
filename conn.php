@@ -28,7 +28,7 @@
 		echo $execval;
 		echo "Information successfully...";
 
-		$sql = "CREATE DATABASE myDB";
+		$sql = "CREATsE DATABASE myDB";
 	if ($conn->query($sql) === TRUE) {
   		echo "Database created successfully";
 	} else {
@@ -38,4 +38,3 @@
 		$stmt->close();
 		$conn->close();
 	}
-	?>
