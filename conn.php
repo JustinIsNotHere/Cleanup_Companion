@@ -1,4 +1,21 @@
 <?php
+
+	global $name;
+	global $email;
+	global $hometown;
+	global $zipcode;
+	global $date;
+	global $states;
+	global $sitename;
+	global $sitecity;
+	global $sitecounty;
+	global $cleanuptype;
+	global $waterbottles;
+	global $bottlecaps;
+	global $plasticutensils;
+	global $plasticbags;
+	global $candywrappers;
+	
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$hometown = $_POST['hometown'];
