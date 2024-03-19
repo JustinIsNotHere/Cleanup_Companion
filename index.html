@@ -5,11 +5,17 @@
         <meta http-equiv="refresh" content="10">
         <meta http equiv="X-UA Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <title>Cleanup Data Form</title>
         <link rel="stylesheet" href="style.css" />
 
     </head>  
     <body>
+        <div id="topRightText"> Thank you for participating in this clean-up and completeing this data form. Data collection is essential to identifying pollution trends and educating lawmakers and citizens. </div>
+        
+       
+
+
         <section class="container">
             
             <fieldset>
@@ -148,53 +154,110 @@
            
             <fieldset>
             <header>Volunteer Data Input</header>
-            <label><b>Plastic</b></label>
+            
+            
+            <h3 for="metalInputs">Plastic</h3>
+            <hr class="line">
             
             <form action="#" class="form">
                 <div class = "column">
                 <div class="input-box">
+                
                 <label for="waterbottles">Water Bottles:</label>
                 <input type="number" id="waterbottles" name="waterbottles" min="0">
             
                 <label for="bottlecaps">Bottle Caps:</label>
                 <input type="number" id="bottlecaps" name="bottlecaps" min="0">
+
+                <label for="lids">Lids:</label>
+                <input type="number" id="lids" name="lids" min="0">
             
+                <label for="cigarettes">Cigarettes:</label>
+                <input type="number" id="cigarettes" name="cigarettes" min="0">
+            
+                <label for="ecigarettes">E-Cigarettes (Vapes):</label>
+                <input type="number" id="ecigarettes" name="ecigarettes" min="0">
+            
+
                 <label for="plasticutensils">Plastic Utensils:</label>
                 <input type="number" id="plasticutensils" name="plasticutensils" min="0">
             
                 <label for="plasticbags">Plastic Bags:</label>
                 <input type="number" id="plasticbags" name="plasticbags" min="0">
             
-                <label for="other">Other Plastic:</label>
-                <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
-                
-               
+                <label for="lighter">Lighters:</label>
+                <input type="number" id="lighter" name="lighter" min="0">
             
+                <label for="hairties">Hair Ties:</label>
+                <input type="number" id="hairties" name="hairties" min="0">
+        
+                <label for="pen">Pens:</label>
+                <input type="number" id="pen" name="pen" min="0">
+        
+                <label for="ribbon">Ribbon:</label>
+                <input type="number" id="ribbon" name="ribbon" min="0">
+        
+                <div id="section1Fields"> 
+                <label for="other">Other Plastic:</label>
+                <input type="text" id="other"  placeholder="Enter another plastic item" name="other">
+              </div>                
+              <div id="section1ButtonDiv">
+                <button id="section1Button">Add More</button>
+            </div>
             </div>
             
             <div class="input-box">
-                <label for="candywrappers">Candy Wrappers:</label>
+                <label for="candywrappers">Candy/Food Wrappers:</label>
                 <input type="number" id="candywrappers" name="candywrappers" min="0">
             
-                <label for="containers">Take-out Containers:</label>
+                <label for="caprings">Bottle Cap Rings:</label>
+                <input type="number" id="caprings" name="caprings" min="0">
+
+                <label for="fishingline">Fishing Lines:</label>
+                <input type="number" id="fishingline" name="fishingline" min="0">
+
+                <label for="bait">Fishing Lure/Floats:</label>
+                <input type="number" id="bait" name="bait" min="0">
+
+                <label for="nets">Plastic Nets:</label>
+                <input type="number" id="nets" name="nets" min="0">
+
+                <label for="containers">Plastic Take-out Containers:</label>
                 <input type="number" id="containers" name="containers" min="0">
-            
-            
-            
+        
                 <label for="flosspicks">Floss Picks:</label>
                 <input type="number" id="flosspicks" name="flosspicks" min="0">
             
                 <label for="syringes">Syringes:</label>
                 <input type="number" id="syringes" name="syringes" min="0">
 
-                <label for="customamount">Amount:</label>
-                <input type="number" id="customamount" name="customamount" min="0" step="1">
+                <label for="pstraws">Plastic Straws:</label>
+                <input type="number" id="pstraws" name="pstraws" min="0">
+
+                <label for="holders">6-Pack Holders:</label>
+                <input type="number" id="holders" name="holders" min="0">
+
+                <label for="toys">Toys:</label>
+                <input type="number" id="toys" name="toys" min="0">
+
+
+                <div id="inputContainer1">
+                    <label for="customamount1">Amount:</label>
+                    <input type="number" id="customamount1" name="customamount1" min="0" step="1">
+                </div>
+                <button id="addMoreButton1">Add More</button>
+                
             </div>
             </div>
         </form>
     </div>
 
-        <label for="metalInputs"><b>Metal</b></label>
+
+
+        
+    
+        <h3 for="metalInputs">Metal</h3>
+        <hr class="line">
         <form action="#" class="form">
             <div class = "column">
             <div class="input-box">
@@ -209,10 +272,15 @@
         
             <label for="fishinghooks">Fishing Hooks:</label>
             <input type="number" id="fishinghooks" name="fishinghooks" min="0">
-        
+            
+            <div id="section2Fields">  
             <label for="other">Other Metal:</label>
-            <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
-        
+            <input type="text" id="other"  placeholder="Enter another metal item" name="other">
+            </div>          
+            
+            <div id="section2ButtonDiv">
+                <button id="section2Button">Add More</button>
+            </div>
         </div>
         
         <div class="input-box">
@@ -228,14 +296,66 @@
             <label for="poptabs">Pop Tabs:</label>
             <input type="number" id="poptabs" name="poptabs" min="0">
 
-            <label for="customamount">Amount:</label>
-            <input type="number" id="customamount" name="customamount" min="0" step="1">
-        </div>
+            <div id="inputContainer2">
+                <label for="customamount2">Amount:</label>
+                <input type="number" id="customamount2" name="customamount2" min="0" step="1">
+            </div>
+            <button id="addMoreButton2">Add More</button>
         </div>
         </form>
     </div>
 
-    <label for="metalInputs"><b>Paper</b></label>
+    <h3 for="metalInputs">Foam (Styrofoam)</h3>
+    <hr class="line">
+    
+    <form action="#" class="form">
+        <div class = "column">
+        <div class="input-box">
+        <label for="foamcup">Foam Cup:</label>
+        <input type="number" id="foamcup" name="foamcup" min="0">
+    
+        <label for="foampacking">Foam Packaging Material:</label>
+        <input type="number" id="foampacking" name="foampacking" min="0">
+    
+        <label for="foampieces">Foam Pieces:</label>
+        <input type="number" id="foampieces" name="foampieces" min="0">
+    
+        <div id="section3Fields">  
+            <label for="other">Other Foam:</label>
+            <input type="text" id="other"  placeholder="Enter another foam item" name="other">
+            </div>          
+            
+        <div id="section3ButtonDiv">
+            <button id="section3Button">Add More</button>
+        </div>
+        
+    </div>
+    
+    <div class="input-box">
+        <label for="foamplates">Foam Plates:</label>
+        <input type="number" id="foamplates" name="foamplates" min="0">
+    
+        <label for="foamcontainers">Foam Take-out Containers:</label>
+        <input type="number" id="foamcontainers" name="foamcontainers" min="0">
+
+        <label for="trays">Foam Trays:</label>
+        <input type="number" id="trays" name="trays" min="0">
+    
+        <div id="inputContainer3">
+            <label for="customamount1">Amount:</label>
+            <input type="number" id="customamount3" name="customamount3" min="0" step="1">
+        </div>
+        <button id="addMoreButton3">Add More</button>
+    </div>
+    </div>
+</form>
+</div>
+
+
+
+
+    <h3 for="metalInputs">Paper</h3>
+    <hr class="line">
     <form action="#" class="form">
         <div class = "column">
         <div class="input-box">
@@ -254,8 +374,15 @@
         <label for="recipts">Recipts:</label>
         <input type="number" id="recipts" name="recipts" min="0">
         
-        <label for="other">Other Paper:</label>
-        <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
+        <div id="section4Fields">  
+            <label for="other">Other Paper:</label>
+            <input type="text" id="other"  placeholder="Enter another paper item" name="other">
+            </div>          
+            
+        <div id="section4ButtonDiv">
+            <button id="section4Button">Add More</button>
+        </div>
+    
     </div>
     
     <div class="input-box">
@@ -274,14 +401,18 @@
         <label for="napkins">Napkins:</label>
         <input type="number" id="napkins" name="napkins" min="0"> 
 
-        <label for="customamount">Amount:</label>
-        <input type="number" id="customamount" name="customamount" min="0" step="1">
+        <div id="inputContainer4">
+            <label for="customamount4">Amount:</label>
+            <input type="number" id="customamount4" name="customamount4" min="0" step="1">
+        </div>
+        <button id="addMoreButton4">Add More</button>
     </div>
     </div>
     </form>
 </div>
 
-<label for="metalInputs"><b>Other</b></label>
+<h3 for="metalInputs">Other Miscellaneous Items</h3>
+<hr class="line">
     <form action="#" class="form">
         <div class = "column">
         <div class="input-box">
@@ -300,8 +431,14 @@
         <label for="wood">Wood Piece:</label>
         <input type="number" id="wood" name="wood" min="0">
 
-        <label for="other">Other Miscellaneous:</label>
-        <input type="text" id="other"  placeholder="Enter any item found that is not listed" name="other">
+    <div id="section5Fields">  
+            <label for="other">Other Miscellaneous:</label>
+            <input type="text" id="other"  placeholder="Enter another miscellaneous item" name="other">
+            </div>          
+            
+        <div id="section5ButtonDiv">
+            <button id="section5Button">Add More</button>
+        </div>
     </div>
     
     <div class="input-box">
@@ -320,13 +457,65 @@
         <label for="glass">Glass Piece:</label>
         <input type="number" id="glass" name="glass" min="0"> 
 
-        <label for="customamount">Amount:</label>
-        <input type="number" id="customamount" name="customamount" min="0" step="1">
+        <div id="inputContainer5">
+            <label for="customamount5">Amount:</label>
+            <input type="number" id="customamount5" name="customamount5" min="0" step="1">
+        </div>
+        <button id="addMoreButton5">Add More</button>
     </div>
-    </div>
+
+    <script>
+window.onload = function() {
+    var addMoreButtons = document.querySelectorAll('button[id^="addMoreButton"]');
+
+    addMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            addInput(button.id.replace('addMoreButton', 'inputContainer'));
+        });
+    });
+};
+
+function addInput(target) {
+    var inputContainer = document.getElementById(target);
+    var newInput = document.createElement('input');
+    newInput.type = 'number';
+    newInput.name = 'customamount';
+    newInput.min = '0';
+    newInput.step = '1';
+    inputContainer.appendChild(newInput);
+}
+
+    </script>
+
+    <script>
+        function addField(sectionId) {
+            let fieldCounter = 1;
+        
+            $(`#${sectionId}Button`).click(function (event) {
+                event.preventDefault();
+                const inputField = `<input type="text" id="${sectionId}_${fieldCounter}" placeholder="Enter another item" name="${sectionId}_${fieldCounter}"><br>`;
+                $(`#${sectionId}Fields`).append(inputField);
+                fieldCounter++;
+            });
+        }
+        
+        addField('section1');
+        addField('section2');
+        addField('section3');
+        addField('section4');
+        addField('section5');
+        </script>
+
+
 </fieldset>
+
+
     </form>
 </div>
+
+
+
 
 
 
