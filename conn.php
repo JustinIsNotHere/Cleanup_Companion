@@ -14,8 +14,19 @@
 	global $bottlecaps;
 	global $plasticutensils;
 	global $plasticbags;
+	global $otherplastic;
 	global $candywrappers;
-	
+	global $containers;
+	global $flosspicks;
+	global $syringes;
+	global $batteries;
+	global $metalbottlecaps;
+	global $metalcans;
+	global $fishhooks;
+	global $othermetal;
+	global $cardboard;
+	global $papercups;
+
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$hometown = $_POST['hometown'];
@@ -30,8 +41,18 @@
 	$bottlecaps = $_POST['bottlecaps'];
 	$plasticutensils = $_POST['plasticutensils'];
 	$plasticbags = $_POST['plasticbags'];
+	$otherplastic = $_POST['otherplastic'];
 	$candywrappers = $_POST['candywrappers'];
-
+	$containers= $_POST['containers'];
+	$flosspicks= $_POST['flosspicks'];
+	$syringes= $_POST['syringes'];
+	$batteries = $_POST['batteries'];
+	$metalbottlecaps= $_POST['metalbottlecaps'];
+	$metalcans= $_POST['metalcans'];
+	$fishhooks= $_POST['fishhooks'];
+	$othermetal= $_POST['othermetal'];
+	$cardboard= $_POST['cardboard'];
+	$papercups= $_POST['papercups'];
 
 	// Database connection
 	$conn = new mysqli('localhost','root','','test');
@@ -39,8 +60,8 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, plasticutensils, plasticbags, candywrappers,) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, $cleanuptype, $waterbottles, $bottlecaps, $plasticutensils, $plasticbags, $candywrappers);
+		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, plasticutensils, plasticbags, otherplastic, candywrappers, containers, flosspicks, syringes, batteries, metalbottlecaps, metalcans, fishhooks, othermetal, cardboard, papercups) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?)");
+		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, $cleanuptype, $waterbottles, $bottlecaps, $plasticutensils, $plasticbags, $otherplastic, $candywrappers, $containers, $flosspicks, $syringes, $batteries, $metalbottlecaps, $metalcans, $fishhooks, $othermetal, $cardboard, $papercups);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Information successfully...";
