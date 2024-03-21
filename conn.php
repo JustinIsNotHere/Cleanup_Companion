@@ -39,8 +39,22 @@
 	global $metalcans;
 	global $fishhooks;
 	global $othermetal;
+	global $foil;
+	global $nails;
+	global $wire;
+	global $poptabs;
+	global $foamcup;
+	global $foampacking;
+	global $foampieces;
+	global $otherfoam;
+	global $foamplates;
+	global $foamcontainers;
+	global $trays;
 	global $cardboard;
-	global $papercups;
+	global $cups;
+	global $newspaper;
+	global $paperbags;
+	global $receipts;
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -80,8 +94,22 @@
 	$metalcans= $_POST['metalcans'];
 	$fishhooks= $_POST['fishhooks'];
 	$othermetal= $_POST['othermetal'];
+	$foil= $_POST['foil'];
+	$nails= $_POST['wire'];
+	$wire= $_POST['nails'];
+	$poptabs= $_POST['poptabs'];
+	$foamcup=$_POST['foamcups'];
+	$foampacking=$_POST['foampacking'];
+	$foampieces=$_POST['foampieces'];
+	$otherfoam=$_POST['otherfoam'];
+	$foamplates=$_POST['foamplates'];
+	$foamcontainers=$_POST['foamcontainers'];
+	$trays=$_POST['trays'];
 	$cardboard= $_POST['cardboard'];
-	$papercups= $_POST['papercups'];
+	$papercups= $_POST['cups'];
+	$newspaper= $_POST['newspaper'];
+	$paperbags= $_POST['paperbags'];
+	$receipts= $_POST['receipts'];
 
 	// Database connection
 	$conn = new mysqli('localhost','root','','test');
@@ -89,8 +117,18 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, otherplastic, candywrappers, caprings, fishingline, bait, nets, containers, flosspicks, syringes, pstraws, holders, toys, batteries, metalbottlecaps, metalcans, fishhooks, othermetal, cardboard, papercups) values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ,?, ?, ?, ?, ?, ?, ?, ?, ?)");
-		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, $cleanuptype, $waterbottles, $bottlecaps, $lids, $cigarettes, $ecigarettes, $plasticutensils, $plasticbags, $lighter, $hairties, $pen, $ribbon, $otherplastic, $candywrappers, $caprings, $fishingline, $bait, $nets, $containers, $flosspicks, $syringes, $pstraws, $holders, $toys, $batteries, $metalbottlecaps, $metalcans, $fishhooks, $othermetal, $cardboard, $papercups);
+		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, 
+		bottlecaps, lids, cigarettes, ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, 
+		ribbon, otherplastic, candywrappers, caprings, fishingline, bait, nets, containers, flosspicks, 
+		syringes, pstraws, holders, toys, batteries, metalbottlecaps, metalcans, fishhooks, othermetal, 
+		foil, wire, nails, poptabs, foamcups, foampacking, foampieces, otherfoam, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, receipts,) 
+		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, 
+		$cleanuptype, $waterbottles, $bottlecaps, $lids, $cigarettes, $ecigarettes, $plasticutensils, 
+		$plasticbags, $lighter, $hairties, $pen, $ribbon, $otherplastic, $candywrappers, $caprings, 
+		$fishingline, $bait, $nets, $containers, $flosspicks, $syringes, $pstraws, $holders, $toys, 
+		$batteries, $metalbottlecaps, $metalcans, $fishhooks, $othermetal, $foil, $wire, $nails, 
+		$poptabs, $foamcups, $foampacking, $foampieces, $otherfoam, $foamplates, $foamcontainers, $trays, $cardboard, $cups, $newspaper, $paperbags, $receipts,);
 		$execval = $stmt->execute();
 		echo $execval;
 		echo "Information successfully...";
