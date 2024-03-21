@@ -55,6 +55,23 @@
 	global $newspaper;
 	global $paperbags;
 	global $receipts;
+	global $otherpaper;
+	global $paperplates;
+	global $magazines;
+	global $paperpieces;
+	global $paperstraws;
+	global $napkins;
+	global $clothing;
+	global $shoes;
+	global $towels;
+	global $sticks;
+	global $wood;
+	global $othermisc;
+	global $balloon;
+	global $tire;
+	global $gloves;
+	global $glassbottle;
+	global $glass;
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
@@ -110,6 +127,23 @@
 	$newspaper= $_POST['newspaper'];
 	$paperbags= $_POST['paperbags'];
 	$receipts= $_POST['receipts'];
+	$otherpaper= $_POST['otherpaper'];
+	$paperplates= $_POST['paperplates'];
+	$magazines= $_POST['magazines'];
+	$paperpieces= $_POST['paperpieces'];
+	$paperstraws= $_POST['paperstraws'];
+	$napkins= $_POST['napkins'];
+	$clothing= $_POST['clothing'];
+	$shoes= $_POST['shoes'];
+	$towels= $_POST['towels'];
+	$sticks= $_POST['sticks'];
+	$wood= $_POST['wood'];
+	$othermisc= $_POST['othermisc'];
+	$balloon= $_POST['balloon'];
+	$tire= $_POST['tire'];
+	$gloves= $_POST['gloves'];
+	$glassbottle= $_POST['glassbottle'];
+	$glass= $_POST['glass'];
 
 	// Database connection
 	$conn = new mysqli('localhost','root','','test');
@@ -117,19 +151,28 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, 
-		bottlecaps, lids, cigarettes, ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, 
-		ribbon, otherplastic, candywrappers, caprings, fishingline, bait, nets, containers, flosspicks, 
-		syringes, pstraws, holders, toys, batteries, metalbottlecaps, metalcans, fishhooks, othermetal, 
-		foil, wire, nails, poptabs, foamcups, foampacking, foampieces, otherfoam, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, receipts,) 
-		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, 
+		states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, 
+		ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, otherplastic, candywrappers, 
+		caprings, fishingline, bait, nets, containers, flosspicks, syringes, pstraws, holders, toys, batteries, 
+		metalbottlecaps, metalcans, fishhooks, othermetal, foil, wire, nails, poptabs, foamcups, foampacking, 
+		foampieces, otherfoam, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, 
+		receipts, otherpaper, paperplates, magazines, paperstraws, napkins, clothing, shoes, towels, sticks, wood, 
+		othermisc, balloon, tire, gloves, glassbottle, glass) 
+		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+		
 		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, 
 		$cleanuptype, $waterbottles, $bottlecaps, $lids, $cigarettes, $ecigarettes, $plasticutensils, 
 		$plasticbags, $lighter, $hairties, $pen, $ribbon, $otherplastic, $candywrappers, $caprings, 
 		$fishingline, $bait, $nets, $containers, $flosspicks, $syringes, $pstraws, $holders, $toys, 
 		$batteries, $metalbottlecaps, $metalcans, $fishhooks, $othermetal, $foil, $wire, $nails, 
-		$poptabs, $foamcups, $foampacking, $foampieces, $otherfoam, $foamplates, $foamcontainers, $trays, $cardboard, $cups, $newspaper, $paperbags, $receipts,);
+		$poptabs, $foamcups, $foampacking, $foampieces, $otherfoam, $foamplates, $foamcontainers, 
+		$trays, $cardboard, $cups, $newspaper, $paperbags, $receipts,$otherpaper, $paperplates,
+		$magazines, $paperpieces, $paperstraws, $napkins, $clothing, $shoes, $towels, $sticks, 
+		$wood, $othermisc, $balloon, $tire, $gloves, $glassbottle, $glass);
+		
 		$execval = $stmt->execute();
+		
 		echo $execval;
 		echo "Information successfully...";
 
