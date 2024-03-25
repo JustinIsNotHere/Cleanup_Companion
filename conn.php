@@ -113,6 +113,23 @@
 	$newspaper= $_POST['newspaper'];
 	$paperbags= $_POST['paperbags'];
 	$receipts= $_POST['receipts'];
+	$otherpaper= $_POST['otherpaper'];
+	$paperplates= $_POST['paperplates'];
+	$magazines= $_POST['magazines'];
+	$paperpieces= $_POST['paperpieces'];
+	$paperstraws= $_POST['paperstraws'];
+	$napkins= $_POST['napkins'];
+	$clothing= $_POST['clothing'];
+	$shoes= $_POST['shoes'];
+	$towels= $_POST['towels'];
+	$sticks= $_POST['sticks'];
+	$wood= $_POST['wood'];
+	$othermisc= $_POST['othermisc'];
+	$balloon= $_POST['balloon'];
+	$tire= $_POST['tire'];
+	$gloves= $_POST['gloves'];
+	$glassbottle= $_POST['glassbottle'];
+	$glass= $_POST['glass'];
 
 	// Database connection
 	$conn = new mysqli('localhost','root','','test');
