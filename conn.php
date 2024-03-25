@@ -1,5 +1,6 @@
 <?php
 
+	#defined the global vars, which will be used in the mysql db.
 	global $name;
 	global $email;
 	global $hometown;
@@ -73,6 +74,8 @@
 	global $glassbottle;
 	global $glass;
 
+	#This stretch takes ALL variables and makes the global variables equal to the amounts entered on the form by matching id. 
+	#For ease of adding variables, all IDs should have identical names.
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$hometown = $_POST['hometown'];
