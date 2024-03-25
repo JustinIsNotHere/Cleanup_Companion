@@ -176,6 +176,16 @@ button:hover {
   padding: 10px;
 }
 
+#addMoreButton1, #addMoreButton2, #addMoreButton3, #addMoreButton4,  #addMoreButton5 {
+  width: 50%;     
+}
+
+
+
+
+
+
+
 /*Responsive */
 @media screen and (max-width: 500px) {
   .form .column {
