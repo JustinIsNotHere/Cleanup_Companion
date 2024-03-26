@@ -97,7 +97,7 @@
 	$hairties = $_POST['hairties'];
 	$pen = $_POST['pen'];
 	$ribbon = $_POST['ribbon'];
-	$otherplastic = $_POST['otherplastic'];
+	$otherplastic = $_POST['customtext1'];
 	$candywrappers = $_POST['candywrappers'];
 	$caprings = $_POST['caprings'];
 	$fishingline = $_POST['fishingline'];
@@ -113,7 +113,7 @@
 	$metalbottlecaps= $_POST['metalbottlecaps'];
 	$metalcans= $_POST['metalcans'];
 	$fishhooks= $_POST['fishhooks'];
-	$othermeta = $_POST['othermetal'];
+	$othermeta = $_POST['customtext2'];
 	$foil = $_POST['foil'];
 	$nails = $_POST['wire'];
 	$wire = $_POST['nails'];
@@ -121,7 +121,7 @@
 	$foamcup = $_POST['foamcups'];
 	$foampacking = $_POST['foampacking'];
 	$foampieces = $_POST['foampieces'];
-	$otherfoam = $_POST['otherfoam'];
+	$otherfoam = $_POST['customtext3'];
 	$foamplates = $_POST['foamplates'];
 	$foamcontainers = $_POST['foamcontainers'];
 	$trays = $_POST['trays'];
@@ -130,7 +130,7 @@
 	$newspaper = $_POST['newspaper'];
 	$paperbags = $_POST['paperbags'];
 	$receipts = $_POST['receipts'];
-	$otherpaper = $_POST['otherpaper'];
+	$otherpaper = $_POST['customtext4'];
 	$paperplates = $_POST['paperplates'];
 	$magazines = $_POST['magazines'];
 	$paperpieces = $_POST['paperpieces'];
@@ -141,7 +141,7 @@
 	$towels= $_POST['towels'];
 	$sticks= $_POST['sticks'];
 	$wood= $_POST['wood'];
-	$othermisc= $_POST['othermisc'];
+	$othermisc= $_POST['customtext5'];
 	$balloon= $_POST['balloon'];
 	$tire= $_POST['tire'];
 	$gloves= $_POST['gloves'];
@@ -156,12 +156,12 @@
 	} else {
 		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, 
 		states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, 
-		ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, otherplastic, candywrappers, 
+		ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, customtext1, candywrappers, 
 		caprings, fishingline, bait, nets, containers, flosspicks, syringes, pstraws, holders, toys, batteries, 
-		metalbottlecaps, metalcans, fishhooks, othermetal, foil, wire, nails, poptabs, foamcups, foampacking, 
-		foampieces, otherfoam, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, 
-		receipts, otherpaper, paperplates, magazines, paperstraws, napkins, clothing, shoes, towels, sticks, wood, 
-		othermisc, balloon, tire, gloves, glassbottle, glass) 
+		metalbottlecaps, metalcans, fishhooks, customtext2, foil, wire, nails, poptabs, foamcups, foampacking, 
+		foampieces, customtext3, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, 
+		receipts, customtext4, paperplates, magazines, paperstraws, napkins, clothing, shoes, towels, sticks, wood, 
+		customtext5, balloon, tire, gloves, glassbottle, glass) 
 		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
 		
 		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, 
