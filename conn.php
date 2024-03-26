@@ -80,7 +80,7 @@
 	$hairties = $_POST['hairties'];
 	$pen = $_POST['pen'];
 	$ribbon = $_POST['ribbon'];
-	$otherplastic = $_POST['otherplastic'];
+	$otherplastic = $_POST['customtext1'];
 	$candywrappers = $_POST['candywrappers'];
 	$caprings = $_POST['caprings'];
 	$fishingline = $_POST['fishingline'];
@@ -96,35 +96,35 @@
 	$metalbottlecaps= $_POST['metalbottlecaps'];
 	$metalcans= $_POST['metalcans'];
 	$fishhooks= $_POST['fishhooks'];
-	$othermetal= $_POST['othermetal'];
-	$foil= $_POST['foil'];
-	$nails= $_POST['wire'];
-	$wire= $_POST['nails'];
-	$poptabs= $_POST['poptabs'];
-	$foamcup=$_POST['foamcups'];
-	$foampacking=$_POST['foampacking'];
-	$foampieces=$_POST['foampieces'];
-	$otherfoam=$_POST['otherfoam'];
-	$foamplates=$_POST['foamplates'];
-	$foamcontainers=$_POST['foamcontainers'];
-	$trays=$_POST['trays'];
-	$cardboard= $_POST['cardboard'];
-	$papercups= $_POST['cups'];
-	$newspaper= $_POST['newspaper'];
-	$paperbags= $_POST['paperbags'];
-	$receipts= $_POST['receipts'];
-	$otherpaper= $_POST['otherpaper'];
-	$paperplates= $_POST['paperplates'];
-	$magazines= $_POST['magazines'];
-	$paperpieces= $_POST['paperpieces'];
-	$paperstraws= $_POST['paperstraws'];
+	$othermeta = $_POST['othermetal'];
+	$foil = $_POST['foil'];
+	$nails = $_POST['wire'];
+	$wire = $_POST['nails'];
+	$poptabs = $_POST['poptabs'];
+	$foamcup = $_POST['foamcups'];
+	$foampacking = $_POST['foampacking'];
+	$foampieces = $_POST['foampieces'];
+	$otherfoam = $_POST['otherfoam'];
+	$foamplates = $_POST['foamplates'];
+	$foamcontainers = $_POST['foamcontainers'];
+	$trays = $_POST['trays'];
+	$cardboard = $_POST['cardboard'];
+	$papercups = $_POST['cups'];
+	$newspaper = $_POST['newspaper'];
+	$paperbags = $_POST['paperbags'];
+	$receipts = $_POST['receipts'];
+	$otherpaper = $_POST['otherpaper'];
+	$paperplates = $_POST['paperplates'];
+	$magazines = $_POST['magazines'];
+	$paperpieces = $_POST['paperpieces'];
+	$paperstraws = $_POST['paperstraws'];
 	$napkins= $_POST['napkins'];
 	$clothing= $_POST['clothing'];
 	$shoes= $_POST['shoes'];
 	$towels= $_POST['towels'];
 	$sticks= $_POST['sticks'];
 	$wood= $_POST['wood'];
-	$othermisc= $_POST['othermisc'];
+	$othermisc= $_POST['customtext5'];
 	$balloon= $_POST['balloon'];
 	$tire= $_POST['tire'];
 	$gloves= $_POST['gloves'];
@@ -137,12 +137,16 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, 
-		bottlecaps, lids, cigarettes, ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, 
-		ribbon, otherplastic, candywrappers, caprings, fishingline, bait, nets, containers, flosspicks, 
-		syringes, pstraws, holders, toys, batteries, metalbottlecaps, metalcans, fishhooks, othermetal, 
-		foil, wire, nails, poptabs, foamcups, foampacking, foampieces, otherfoam, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, receipts,) 
-		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, 
+		states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, 
+		ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, otherplastic, candywrappers, 
+		caprings, fishingline, bait, nets, containers, flosspicks, syringes, pstraws, holders, toys, batteries, 
+		metalbottlecaps, metalcans, fishhooks, othermetal, foil, wire, nails, poptabs, foamcups, foampacking, 
+		foampieces, otherfoam, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, 
+		receipts, otherpaper, paperplates, magazines, paperstraws, napkins, clothing, shoes, towels, sticks, wood, 
+		othermisc, balloon, tire, gloves, glassbottle, glass) 
+		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+		
 		$stmt->bind_param("sssssi", $name, $email, $htown, $zip, $date, $states, $sitename, $sitecounty, 
 		$cleanuptype, $waterbottles, $bottlecaps, $lids, $cigarettes, $ecigarettes, $plasticutensils, 
 		$plasticbags, $lighter, $hairties, $pen, $ribbon, $otherplastic, $candywrappers, $caprings, 
