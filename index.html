@@ -8,6 +8,9 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <title>Cleanup Data Form</title>
         <link rel="stylesheet" href="style.css" />
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+
 
     </head>  
     <body>
@@ -120,6 +123,16 @@
                     <option value="wyoming">Wyoming</option>
                 </select>
             </div>
+            <script>
+            $(document).ready(function() {
+    $('#states').select2({
+        dropdownAutoWidth: true,
+        width: '100%'
+    });
+});
+
+        </script>
+            
             
             <div class="date-picker">
                 <label for="date">Choose Cleanup date:</label>
@@ -136,15 +149,27 @@
                     </div>
                     <div class="sitetype">
                         <input type="radio" id="check-beach" name="sitetype" />
-                        <label for="check-beach">Shoreline/Beach</label>
+                        <label for="check-beach">Beach</label>
                     </div>
                     <div class="sitetype">
-                        <input type="radio" id="check-stream" name="sitetype" />
-                        <label for="check-stream">Lake, Stream, or River</label>
+                        <input type="radio" id="check-river" name="sitetype" />
+                        <label for="check-river">River</label>
                     </div>
                     <div class="sitetype">
                         <input type="radio" id="check-road" name="sitetype" />
                         <label for="check-road">Road</label>
+                    </div>
+                    <div class="sitetype">
+                        <input type="radio" id="check-woods" name="sitetype" />
+                        <label for="check-woods">Woods</label>
+                    </div>
+                    <div class="sitetype">
+                        <input type="radio" id="check-urban" name="sitetype" />
+                        <label for="check-urban">Urban Area</label>
+                    </div>
+                    <div class="sitetype">
+                        <input type="radio" id="check-lake" name="sitetype" />
+                        <label for="check-lake">Lake</label>
                     </div>
                 </div> 
             </div>
@@ -153,6 +178,7 @@
            
             <fieldset>
             <header>Volunteer Data Input</header>
+            <p align="center"><b style="font-weight: normal;">Enter the amount of each item collected and then increase/decrease the amount using the arrows in the right of each box if you find more.</b></p>
             
             
             <h3 for="metalInputs">Plastic</h3>
@@ -198,7 +224,7 @@
         
                 <div class="textinput1" id="textInputContainer1">
                     <label for="customtext1">Other Plastic:</label>
-                    <input type="text" id="customtext1" name="customtext1">
+                    <input type="text" placeholder="Enter another item if it isn't listed" id="customtext1" name="customtext1">
                 </div>
                 <button id="addMoreButton1">Add More</button>
 
@@ -235,7 +261,7 @@
                 <label for="holders">6-Pack Holders:</label>
                 <input type="number" id="holders" name="holders" min="0">
 
-                <label for="toys">Toys:</label>
+                <label for="toys">Plastic Pieces:</label>
                 <input type="number" id="toys" name="toys" min="0">
 
 
@@ -270,7 +296,7 @@
             
             <div class="textinput2" id="textInputContainer2">
                 <label for="customtext2">Other Metal:</label>
-                <input type="text" id="customtext2" name="customtext2">
+                <input type="text" placeholder="Enter another item if it isn't listed" id="customtext2" name="customtext2">
             </div>
             <button id="addMoreButton2">Add More</button>
         </div>
@@ -279,7 +305,7 @@
             <label for="foil">Foil:</label>
             <input type="number" id="foil" name="foil" min="0">
         
-            <label for="nails">Nails:</label>
+            <label for="nails">Nails/Screws:</label>
             <input type="number" id="nails" name="nails" min="0">
         
             <label for="wire">Wire:</label>
@@ -355,12 +381,12 @@
         <label for="paperbags">Paper Bags:</label>
         <input type="number" id="paperbags" name="paperbags" min="0">
 
-        <label for="recipts">Recipts:</label>
+        <label for="recipts">Receipts:</label>
         <input type="number" id="recipts" name="recipts" min="0">
         
         <div class="textinput4" id="textInputContainer4">
             <label for="customtext4">Other Paper:</label>
-            <input type="text" id="customtext4" name="customtext4">
+            <input type="text" placeholder="Enter another item if it isn't listed" id="customtext4" name="customtext4">
         </div>
         <button id="addMoreButton4">Add More</button>
     
@@ -373,7 +399,7 @@
         <label for="magazines">Magazines:</label>
         <input type="number" id="magazines" name="magazines" min="0">
     
-        <label for="paperpeices">Paper Peices:</label>
+        <label for="paperpeices">Paper Pieces:</label>
         <input type="number" id="paperpeices" name="paperpeices" min="0">
     
         <label for="paperstraws">Paper Straws:</label>
@@ -412,7 +438,7 @@
 
         <div class="textinput5" id="textInputContainer5">
             <label for="customtext5">Other Miscellaneous:</label>
-            <input type="text" id="customtext5" name="customtext5">
+            <input type="text" placeholder="Enter another item if it isn't listed" id="customtext5" name="customtext5">
         </div>
         <button id="addMoreButton5">Add More</button>
             
