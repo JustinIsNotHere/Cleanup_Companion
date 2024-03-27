@@ -58,7 +58,9 @@
 	global $foamcup;
 	global $foampacking;
 	global $foampieces;
+	
 	global $otherfoam;
+
 	global $foamplates;
 	global $foamcontainers;
 	global $trays;
@@ -67,6 +69,23 @@
 	global $newspaper;
 	global $paperbags;
 	global $receipts;
+	global $otherpaper;
+	global $paperplates;
+	global $magazines;
+	global $paperpieces;
+	global $paperstraws;
+	global $napkins;
+	global $clothing;
+	global $shoes;
+	global $towels;
+	global $sticks;
+	global $wood;
+	global $othermisc;
+	global $balloon;
+	global $tire;
+	global $gloves;
+	global $glassbottle;
+	global $glass;
 
 	#This stretch takes ALL variables and makes the global variables equal to the amounts entered on the form by matching id. 
 	#For ease of adding variables, all IDs should have identical names.
@@ -91,7 +110,9 @@
 	$hairties = $_POST['hairties'];
 	$pen = $_POST['pen'];
 	$ribbon = $_POST['ribbon'];
+	
 	$otherplastic = $_POST['customtext1'];
+	
 	$candywrappers = $_POST['candywrappers'];
 	$caprings = $_POST['caprings'];
 	$fishingline = $_POST['fishingline'];
@@ -107,7 +128,7 @@
 	$metalbottlecaps= $_POST['metalbottlecaps'];
 	$metalcans= $_POST['metalcans'];
 	$fishhooks= $_POST['fishhooks'];
-	$othermeta = $_POST['othermetal'];
+	$othermeta = $_POST['customtext2'];
 	$foil = $_POST['foil'];
 	$nails = $_POST['wire'];
 	$wire = $_POST['nails'];
@@ -115,7 +136,7 @@
 	$foamcup = $_POST['foamcups'];
 	$foampacking = $_POST['foampacking'];
 	$foampieces = $_POST['foampieces'];
-	$otherfoam = $_POST['otherfoam'];
+	$otherfoam = $_POST['customtext3'];
 	$foamplates = $_POST['foamplates'];
 	$foamcontainers = $_POST['foamcontainers'];
 	$trays = $_POST['trays'];
@@ -124,7 +145,7 @@
 	$newspaper = $_POST['newspaper'];
 	$paperbags = $_POST['paperbags'];
 	$receipts = $_POST['receipts'];
-	$otherpaper = $_POST['otherpaper'];
+	$otherpaper = $_POST['customtext4'];
 	$paperplates = $_POST['paperplates'];
 	$magazines = $_POST['magazines'];
 	$paperpieces = $_POST['paperpieces'];
@@ -135,7 +156,9 @@
 	$towels= $_POST['towels'];
 	$sticks= $_POST['sticks'];
 	$wood= $_POST['wood'];
+	
 	$othermisc= $_POST['customtext5'];
+	
 	$balloon= $_POST['balloon'];
 	$tire= $_POST['tire'];
 	$gloves= $_POST['gloves'];
