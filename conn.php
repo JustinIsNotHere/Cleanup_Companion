@@ -21,8 +21,19 @@
 	global $lighter;
 	global $hairties;
 	global $pen;
-	global $ribbom;
+	global $ribbon;
 	global $otherplastic;
+
+	global $otherplastic1;
+	global $otherplastic2;
+	global $otherplastic3;
+	global $otherplastic4;
+	global $otherplastic5;
+	global $otherplastic6;
+	global $otherplastic7;
+	global $otherplastic8;
+	global $otherplastic;
+
 	global $candywrappers;
 	global $caprings;
 	global $fishingline;
