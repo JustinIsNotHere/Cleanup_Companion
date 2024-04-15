@@ -2,7 +2,7 @@
 <html lang="en"> 
     <head>
         <meta charset="UTF-8" />
-        <meta http-equiv="refresh" content="10">
+        
         <meta http equiv="X-UA Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -24,23 +24,27 @@
             <header>Volunteer Information</header>
             <form action="#" class="form">
                 <div class="input-box">
-                    <label>Name:</label>
-                    <input type="text" placeholder="Enter first then last name" required/>
+                    <label>Full Name:</label>
+                    <input type="text" required/>
                 </div>
 
                 <div class="input-box">
                     <label>Email Address:</label>
-                    <input type="text" placeholder="Enter valid email" required/>
+                    <input type="text"  required/>
+                </div>
+                <div class="input-box">
+                    <label>School or Oragnization You're Affiliated With (Optional):</label>
+                    <input type="text" />
                 </div>
             <div class = "column"> 
                 <div class="input-box">
                     <label>Hometown City:</label>
-                    <input type="text" placeholder="Enter the city where you live"/>
+                    <input type="text" />
                 </div>
 
                 <div class="input-box">
                     <label>Zipcode:</label>
-                    <input type="text" placeholder="Enter your zipcode"/>
+                    <input type="text" />
                 </div>
             </div>
         </fieldset>
@@ -50,19 +54,19 @@
             <header>Cleanup Site Information</header>
             <form action="#" class="form">
                 <div class="input-box">
-                    <label>Site Name:</label>
-                    <input type="text" placeholder="Enter name of the cleanup site" required/>
+                    <label>Cleanup Site Name:</label>
+                    <input type="text" required/>
                 </div>
 
             <div class = "column"> 
                 <div class="input-box">
                     <label>Site City:</label>
-                    <input type="text" placeholder="Enter cleanup site city"/>
+                    <input type="text" />
                 </div>
 
                 <div class="input-box">
                     <label>Site County:</label>
-                    <input type="text" placeholder="Enter cleanup site county"/>
+                    <input type="text" />
                 </div>
             </div>
 
@@ -222,11 +226,6 @@
                 <label for="ribbon">Ribbon:</label>
                 <input type="number" id="ribbon" name="ribbon" min="0">
         
-                <div class="textinput1" id="textInputContainer1">
-                    <label for="customtext1">Other Plastic:</label>
-                    <input type="text" placeholder="Enter another item if it isn't listed" id="customtext1" name="customtext1">
-                </div>
-                <button id="addMoreButton1">Add More</button>
 
             </div>
             
@@ -265,10 +264,7 @@
                 <input type="number" id="toys" name="toys" min="0">
 
 
-                <div class="input-box1" id="numberInputContainer1">
-                    <label for="customamount1">Amount:</label>
-                    <input type="number" id="customamount1" name="customamount1" min="0" step="1">
-            </div>
+                
             </div>
         </form>
     </div>
@@ -294,11 +290,7 @@
             <label for="fishinghooks">Fishing Hooks:</label>
             <input type="number" id="fishinghooks" name="fishinghooks" min="0">
             
-            <div class="textinput2" id="textInputContainer2">
-                <label for="customtext2">Other Metal:</label>
-                <input type="text" placeholder="Enter another item if it isn't listed" id="customtext2" name="customtext2">
-            </div>
-            <button id="addMoreButton2">Add More</button>
+            
         </div>
         
         <div class="input-box">
@@ -314,10 +306,7 @@
             <label for="poptabs">Pop Tabs:</label>
             <input type="number" id="poptabs" name="poptabs" min="0">
 
-            <div class="input-box2" id="numberInputContainer2">
-                <label for="customamount2">Amount:</label>
-                <input type="number" id="customamount2" name="customamount2" min="0" step="1">
-            </div>
+            
         </div>
     </form>
 </div>
@@ -335,12 +324,7 @@
     
         <label for="foampieces">Foam Pieces:</label>
         <input type="number" id="foampieces" name="foampieces" min="0">
-    
-        <div class="textinput3" id="textInputContainer3">
-            <label for="customtext3">Other Foam:</label>
-            <input type="text" id="customtext3" name="customtext3">
-        </div>
-        <button id="addMoreButton3">Add More</button>
+
         
     </div>
     
@@ -354,10 +338,6 @@
         <label for="trays">Foam Trays:</label>
         <input type="number" id="trays" name="trays" min="0">
     
-        <div class="input-box3" id="numberInputContainer3">
-            <label for="customamount3">Amount:</label>
-            <input type="number" id="customamount3" name="customamount3" min="0" step="1">
-        </div>
     </div>
 </form>
 </div>
@@ -384,11 +364,6 @@
         <label for="recipts">Receipts:</label>
         <input type="number" id="recipts" name="recipts" min="0">
         
-        <div class="textinput4" id="textInputContainer4">
-            <label for="customtext4">Other Paper:</label>
-            <input type="text" placeholder="Enter another item if it isn't listed" id="customtext4" name="customtext4">
-        </div>
-        <button id="addMoreButton4">Add More</button>
     
     </div>
     
@@ -408,10 +383,7 @@
         <label for="napkins">Napkins:</label>
         <input type="number" id="napkins" name="napkins" min="0"> 
 
-        <div class="input-box4" id="numberInputContainer4">
-            <label for="customamount4">Amount:</label>
-            <input type="number" id="customamount4" name="customamount4" min="0" step="1">
-        </div>
+        
     </div>
 </form>
 </div>
@@ -436,12 +408,7 @@
         <label for="wood">Wood Piece:</label>
         <input type="number" id="wood" name="wood" min="0">
 
-        <div class="textinput5" id="textInputContainer5">
-            <label for="customtext5">Other Miscellaneous:</label>
-            <input type="text" placeholder="Enter another item if it isn't listed" id="customtext5" name="customtext5">
-        </div>
-        <button id="addMoreButton5">Add More</button>
-            
+       
     </div>
     
     <div class="input-box">
@@ -460,134 +427,76 @@
         <label for="glass">Glass Piece:</label>
         <input type="number" id="glass" name="glass" min="0"> 
 
-        <div class="input-box5" id="numberInputContainer5">
-            <label for="customamount5">Amount:</label>
-            <input type="number" id="customamount5" name="customamount5" min="0" step="1">
-        </div>
+        
+    
     </div>
 </form>
 </div>
-</fieldset>
 
+<h3 for="metalInputs">Other Items Not Listed Above</h3>
+<hr class="line">
 
-    <script>
-        window.onload = function() {
-    document.getElementById('addMoreButton1').addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent the default action
-        addInput1();
-    });
-    document.getElementById('addMoreButton2').addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent the default action
-        addInput2();
-    });
-    document.getElementById('addMoreButton3').addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent the default action
-        addInput3();
-    });
-    document.getElementById('addMoreButton4').addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent the default action
-        addInput4();
-    });
-    
+<form action="#" class="form">
+    <div class="column">
+        <div class="input-box">
+            <div class="textinput5" id="textInputContainer5">
+                <label for="customtext5">Other Miscellaneous:</label>
+                <input type="text" placeholder="Enter another item if it isn't listed" id="customtext5" name="customtext5">
+            </div>
+            <button id="addMoreButton5">Add More</button>
+        </div>
+        <div class="input-box">
+            <div class="input-box5" id="numberInputContainer5">
+                <label for="customamount5">Amount:</label>
+                <input type="number" id="customamount5" name="customamount5" min="0" step="1">
+            </div>
+        </div>
+    </div>
+</form>
 
-    document.getElementById('addMoreButton5').addEventListener('click', function(event) {
-        event.preventDefault();  // Prevent the default action
-        addInput5();
-    });
-};
+<fieldset>
 
-function addInput1() {
-    var textInputContainer = document.getElementById('textInputContainer1');
-    var numberInputContainer = document.getElementById('numberInputContainer1');
+<script>
+    window.onload = function() {
+        const addButton = document.getElementById('addMoreButton5');
+        let existingBoxes = 0; // Initialize with the actual count of existing buttons
 
-    var newTextInput = document.createElement('input');
-    newTextInput.type = 'text';
-    newTextInput.name = 'customtext1';
-    textInputContainer.appendChild(newTextInput);
+        // Check if there are 30 or more existing buttons
+        if (existingBoxes >= 30) {
+            addButton.disabled = true;
+        }
 
-    var newNumberInput = document.createElement('input');
-    newNumberInput.type = 'number';
-    newNumberInput.name = 'customamount1';
-    newNumberInput.min = '0';
-    newNumberInput.step = '1';
-    numberInputContainer.appendChild(newNumberInput);
-}
-function addInput2() {
-    var textInputContainer = document.getElementById('textInputContainer2');
-    var numberInputContainer = document.getElementById('numberInputContainer2');
+        addButton.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default action
+            addInput5();
+        });
+    };
 
-    var newTextInput = document.createElement('input');
-    newTextInput.type = 'text';
-    newTextInput.name = 'customtext2';
-    textInputContainer.appendChild(newTextInput);
+    function addInput5() {
+        const textInputContainer = document.getElementById('textInputContainer5');
+        const numberInputContainer = document.getElementById('numberInputContainer5');
 
-    var newNumberInput = document.createElement('input');
-    newNumberInput.type = 'number';
-    newNumberInput.name = 'customamount2';
-    newNumberInput.min = '0';
-    newNumberInput.step = '1';
-    numberInputContainer.appendChild(newNumberInput);
-}
-function addInput3() {
-    var textInputContainer = document.getElementById('textInputContainer3');
-    var numberInputContainer = document.getElementById('numberInputContainer3');
+        const newTextInput = document.createElement('input');
+        newTextInput.type = 'text';
+        newTextInput.name = 'customtext5';
+        textInputContainer.appendChild(newTextInput);
 
-    var newTextInput = document.createElement('input');
-    newTextInput.type = 'text';
-    newTextInput.name = 'customtext3';
-    textInputContainer.appendChild(newTextInput);
+        const newNumberInput = document.createElement('input');
+        newNumberInput.type = 'number';
+        newNumberInput.name = 'customamount5';
+        newNumberInput.min = '0';
+        newNumberInput.step = '1';
+        numberInputContainer.appendChild(newNumberInput);
 
-    var newNumberInput = document.createElement('input');
-    newNumberInput.type = 'number';
-    newNumberInput.name = 'customamount3';
-    newNumberInput.min = '0';
-    newNumberInput.step = '1';
-    numberInputContainer.appendChild(newNumberInput);
-}
-function addInput4() {
-    var textInputContainer = document.getElementById('textInputContainer4');
-    var numberInputContainer = document.getElementById('numberInputContainer4');
-
-    var newTextInput = document.createElement('input');
-    newTextInput.type = 'text';
-    newTextInput.name = 'customtext4';
-    textInputContainer.appendChild(newTextInput);
-
-    var newNumberInput = document.createElement('input');
-    newNumberInput.type = 'number';
-    newNumberInput.name = 'customamount4';
-    newNumberInput.min = '0';
-    newNumberInput.step = '1';
-    numberInputContainer.appendChild(newNumberInput);
-}
+        existingBoxes++; // Increment the count of existing buttons
+        if (existingBoxes >= 30) {
+            addButton.disabled = true;
+        }
+    }
+</script>
 
 
 
-function addInput5() {
-    var textInputContainer = document.getElementById('textInputContainer5');
-    var numberInputContainer = document.getElementById('numberInputContainer5');
-
-    var newTextInput = document.createElement('input');
-    newTextInput.type = 'text';
-    newTextInput.name = 'customtext5';
-    textInputContainer.appendChild(newTextInput);
-
-    var newNumberInput = document.createElement('input');
-    newNumberInput.type = 'number';
-    newNumberInput.name = 'customamount5';
-    newNumberInput.min = '0';
-    newNumberInput.step = '1';
-    numberInputContainer.appendChild(newNumberInput);
-}
-
-      </script>
-
-
-
-
-      
-        
-        </fieldset>
 
 
 
