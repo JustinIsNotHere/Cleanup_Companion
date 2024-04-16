@@ -45,6 +45,7 @@ body {
 .form .input-box {
   width: 100%;
   margin-top: 20px;
+
 }
 
 .input-box label {
@@ -136,6 +137,7 @@ h2 {
 
 h3[for="metalInputs"] {
   margin-top: 40px;
+  margin-bottom: 0px;
   font-weight: normal;
 }
 
@@ -182,7 +184,18 @@ button:hover {
 }
 
 
+.toggle-btn {
+  background-color: rgb(204, 229, 255);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
 
+.input-box4 {
+  display: none; /* Initially hidden */
+}
 
 
 
