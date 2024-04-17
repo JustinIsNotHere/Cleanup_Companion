@@ -36,6 +36,7 @@
 	global $Pstraws;
 	global $Holders;
 	global $Toys;
+<<<<<<< HEAD
 	#possible add custom amount?
 	global $batteries;
 	global $metalbottlecaps;
@@ -60,12 +61,45 @@
 	global $newspaper;
 	global $paperbags;
 	global $receipts;
+=======
+	global $Batteries;
+	global $Metalbottlecaps;
+	global $Metalcans;
+	global $Fishhooks;
+
+	global $Foil;
+	global $Nails;
+	global $Wire;
+	global $Poptabs;
+	global $Foamcup;
+	global $Foampacking;
+	global $Foampieces;
+	global $Foamplates;
+	global $Foamcontainers;
+	global $Trays;
+	global $Cardboard;
+	global $Cups;
+	global $Newspaper;
+	global $Paperbags;
+	global $Receipts;
+
+	global $Paperplates;
+	global $Magazines;
+	global $Paperpieces;
+	global $Paperstraws;
+	global $Napkins;
+	global $Clothing;
+	global $Shoes;
+	global $Towels;
+	global $Sticks;
+	global $Wood;
+>>>>>>> 3af776d (names for Vars fully finalized, code essentially)
 	
 	global $otherpaper;
 	
 	global $paperplates;
 	global $magazines;
-	global $paperpieces;
+	global $paperpieces;w
 	global $paperstraws;
 	global $napkins;
 	global $clothing;
@@ -232,6 +266,7 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
+<<<<<<< HEAD
 		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, 
 		states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, 
 		ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, otherplastic, candywrappers, 
@@ -251,6 +286,12 @@
 		$trays, $cardboard, $cups, $newspaper, $paperbags, $receipts,$otherpaper, $paperplates,
 		$magazines, $paperpieces, $paperstraws, $napkins, $clothing, $shoes, $towels, $sticks, 
 		$wood, $othermisc, $balloon, $tire, $gloves, $glassbottle, $glass);
+=======
+		$stmt = $conn->prepare("Enter into the form if applicable (name,email,htown,zip,date,states,sitename,sitecounty,cleanuptype,waterbottles,bottlecaps,lids,cigarettes,ecigarettes,plasticutensils,plasticbags,lighter,hairties,pen,ribbon,candywrappers,caprings,fishingline,bait,nets,containers,flosspicks,syringes,pstraws,holders,toys,batteries,metalbottlecaps,netalcans,fishhooks,foil,wire,nails,poptabs,foamcups,foampacking,foampieces,foamplates,foamcontainers,trays,cardboard,cups,newspaper,paperbags,receipts,paperplates,magazines,paperpieces,paperstraws,napkins,clothing,shoes,towels,sticks,wood,balloon,tire,gloves,glassbottle,glass,customtext1,customtext1a,customtext2,customtext2a,customtext3,customtext3a,customtext4,customtext4a,customtext5,customtext5a,customtext6,customtext6a,customtext7,customtext7a,customtext8,customtext8a,customtext9,customtext9a,customtext10,customtext10a,customtext11,customtext11a,customtext12,customtext12a,customtext13,customtext13a,customtext14,customtext14a,customtext15,customtext15a,customtext16,customtext16a,customtext17,customtext17a,customtext18,customtext18a,customtext19,customtext19a,customtext20,customtext20a,customtext21,customtext21a,customtext22,customtext22a,customtext23,customtext23a,customtext24,customtext24a,customtext25,customtext25a,customtext26,customtext26a,customtext27,customtext27a,customtext28,customtext28a,customtext29,customtext29a,customtext30,customtext30a) 
+		values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		
+		$stmt->bind_param("sssssi", $Name, $Email, $Htown, $Zip, $Date, $States, $Sitename, $Sitecounty, $Cleanuptype, $Waterbottles, $Bottlecaps, $Lids, $Cigarettes, $Ecigarettes, $Plasticutensils, $Plasticbags, $Lighter, $Hairties, $Pen, $Ribbon, $Candywrappers, $Caprings, $Fishingline, $Bait, $Nets, $Containers, $Flosspicks, $Syringes, $Pstraws, $Holders, $Toys, $Batteries, $Metalbottlecaps, $Metalcans, $Fishhooks, $Foil, $Wire, $Nails, $Poptabs, $Foamcups, $Foampacking, $Foampieces, $Foamplates, $Foamcontainers, $Trays, $Cardboard, $Cups, $Newspaper, $Paperbags, $Receipts, $Paperplates,$Magazines, $Paperpieces, $Paperstraws, $Napkins, $Clothing, $Shoes, $Towels, $Sticks, $Wood, $Balloon, $Tire, $Gloves, $Glassbottle, $Glass, $Othermisc1,$Othermisc1a,$Othermisc2,$Othermisc2a,$Othermisc3,$Othermisc3a,$Othermisc4,$Othermisc4a,$Othermisc5,$Othermisc5a,$Othermisc6,$Othermisc6a,$Othermisc7,$Othermisc7a,$Othermisc8,$Othermisc8a,$Othermisc9,$Othermisc9a,$Othermisc10,$Othermisc10a, $Othermisc11, $Othermisc11a,$Othermisc12,$Othermisc12a,$Othermisc13,$Othermisc13a,$Othermisc14,$Othermisc14a,$Othermisc15,$Othermisc15a,$Othermisc16,$Othermisc16a,$Othermisc17,$Othermisc17a,$Othermisc18,$Othermisc18a,$Othermisc19,$Othermisc19a,$Othermisc20,$Othermisc20a,$Othermisc21,$Othermisc21a,$Othermisc22,$Othermisc22a,$Othermisc23,$Othermisc23a,$Othermisc24,$Othermisc24a,$Othermisc25,$Othermisc25a,$Othermisc26,$Othermisc26a,$Othermisc27,$Othermisc27a,$Othermisc28,$Othermisc28a,$Othermisc29,$Othermisc29a,$Othermisc30,$Othermisc30a);
+>>>>>>> 3af776d (names for Vars fully finalized, code essentially)
 		
 		$execval = $stmt->execute();
 		
