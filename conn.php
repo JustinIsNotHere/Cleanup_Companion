@@ -36,7 +36,6 @@
 	global $Pstraws;
 	global $Holders;
 	global $Toys;
-	#possible add custom amount?
 	global $Batteries;
 	global $Metalbottlecaps;
 	global $Metalcans;
@@ -58,7 +57,6 @@
 	global $Paperbags;
 	global $Receipts;
 
-	
 	global $Paperplates;
 	global $Magazines;
 	global $Paperpieces;
@@ -279,35 +277,10 @@
 		echo "$conn->connect_error";
 		die("Connection Failed : ". $conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, 
-		states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, 
-		ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, customtext1, candywrappers, 
-		caprings, fishingline, bait, nets, containers, flosspicks, syringes, pstraws, holders, toys, batteries, 
-		metalbottlecaps, metalcans, fishhooks, customtext2, foil, wire, nails, poptabs, foamcups, foampacking, 
-		foampieces, customtext3, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, 
-		receipts, customtext4, paperplates, magazines, paperstraws, napkins, clothing, shoes, towels, sticks, wood, 
-		customtext5, balloon, tire, gloves, glassbottle, glass) 
-		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ? ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
+		$stmt = $conn->prepare("Enter into the form if applicable (name,email,htown,zip,date,states,sitename,sitecounty,cleanuptype,waterbottles,bottlecaps,lids,cigarettes,ecigarettes,plasticutensils,plasticbags,lighter,hairties,pen,ribbon,candywrappers,caprings,fishingline,bait,nets,containers,flosspicks,syringes,pstraws,holders,toys,batteries,metalbottlecaps,netalcans,fishhooks,foil,wire,nails,poptabs,foamcups,foampacking,foampieces,foamplates,foamcontainers,trays,cardboard,cups,newspaper,paperbags,receipts,paperplates,magazines,paperpieces,paperstraws,napkins,clothing,shoes,towels,sticks,wood,balloon,tire,gloves,glassbottle,glass,customtext1,customtext1a,customtext2,customtext2a,customtext3,customtext3a,customtext4,customtext4a,customtext5,customtext5a,customtext6,customtext6a,customtext7,customtext7a,customtext8,customtext8a,customtext9,customtext9a,customtext10,customtext10a,customtext11,customtext11a,customtext12,customtext12a,customtext13,customtext13a,customtext14,customtext14a,customtext15,customtext15a,customtext16,customtext16a,customtext17,customtext17a,customtext18,customtext18a,customtext19,customtext19a,customtext20,customtext20a,customtext21,customtext21a,customtext22,customtext22a,customtext23,customtext23a,customtext24,customtext24a,customtext25,customtext25a,customtext26,customtext26a,customtext27,customtext27a,customtext28,customtext28a,customtext29,customtext29a,customtext30,customtext30a) 
+		values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		
-		$stmt->bind_param("sssssi", $Name, $Email, $Htown, $Zip, $Date, $States, $Sitename, $Sitecounty, 
-		$Cleanuptype, $Waterbottles, $Bottlecaps, $Lids, $Cigarettes, $Ecigarettes, $Plasticutensils, 
-		$Plasticbags, $Lighter, $Hairties, $Pen, $Ribbon, $Candywrappers, $Caprings, 
-		$Fishingline, $Bait, $Nets, $Containers, $Flosspicks, $Syringes, $Pstraws, $Holders, $Toys, 
-		$Batteries, $Metalbottlecaps, $Metalcans, $Fishhooks, $Foil, $Wire, $Nails, 
-		$Poptabs, $Foamcups, $Foampacking, $Foampieces, $Foamplates, $Foamcontainers, 
-		$Trays, $Cardboard, $Cups, $Newspaper, $Paperbags, $Receipts, $Paperplates,
-		$Magazines, $Paperpieces, $Paperstraws, $Napkins, $Clothing, $Shoes, $Towels, $Sticks, 
-		$Wood, $Balloon, $Tire, $Gloves, $Glassbottle, $Glass, $Othermisc1,$Othermisc1a,
-		$Othermisc2,$Othermisc2a,$Othermisc3,$Othermisc3a,$Othermisc4,$Othermisc4a,
-		$Othermisc5,$Othermisc5a,$Othermisc6,$Othermisc6a,$Othermisc7,$Othermisc7a,
-		$Othermisc8,$Othermisc8a,$Othermisc9,$Othermisc9a,$Othermisc10,$Othermisc10a, 
-		$Otherpaper11, $Otherpaper11a,$Otherpaper12,$Otherpaper12a,$Otherpaper13,$Otherpaper13a,
-		$Otherpaper14,$Otherpaper14a,$Otherpaper15,$Otherpaper15a,$Otherpaper16,$Otherpaper16a,
-		$Otherpaper17,$Otherpaper17a,$Otherpaper18,$Otherpaper18a,$Otherpaper19,$Otherpaper19a,
-		$Otherpaper20,$Otherpaper20a, $Otherpaper21,$Otherpaper21a,$Otherpaper22,$Otherpaper22a,
-		$Otherpaper23,$Otherpaper23a,$Otherpaper24,$Otherpaper24a,$Otherpaper25,$Otherpaper25a,
-		$Otherpaper26,$Otherpaper26a,$Otherpaper27,$Otherpaper27a,$Otherpaper28,$Otherpaper28a,
-		$Otherpaper29,$Otherpaper29a,$Otherpaper30,$Otherpaper30a);
+		$stmt->bind_param("sssssi", $Name, $Email, $Htown, $Zip, $Date, $States, $Sitename, $Sitecounty, $Cleanuptype, $Waterbottles, $Bottlecaps, $Lids, $Cigarettes, $Ecigarettes, $Plasticutensils, $Plasticbags, $Lighter, $Hairties, $Pen, $Ribbon, $Candywrappers, $Caprings, $Fishingline, $Bait, $Nets, $Containers, $Flosspicks, $Syringes, $Pstraws, $Holders, $Toys, $Batteries, $Metalbottlecaps, $Metalcans, $Fishhooks, $Foil, $Wire, $Nails, $Poptabs, $Foamcups, $Foampacking, $Foampieces, $Foamplates, $Foamcontainers, $Trays, $Cardboard, $Cups, $Newspaper, $Paperbags, $Receipts, $Paperplates,$Magazines, $Paperpieces, $Paperstraws, $Napkins, $Clothing, $Shoes, $Towels, $Sticks, $Wood, $Balloon, $Tire, $Gloves, $Glassbottle, $Glass, $Othermisc1,$Othermisc1a,$Othermisc2,$Othermisc2a,$Othermisc3,$Othermisc3a,$Othermisc4,$Othermisc4a,$Othermisc5,$Othermisc5a,$Othermisc6,$Othermisc6a,$Othermisc7,$Othermisc7a,$Othermisc8,$Othermisc8a,$Othermisc9,$Othermisc9a,$Othermisc10,$Othermisc10a, $Othermisc11, $Othermisc11a,$Othermisc12,$Othermisc12a,$Othermisc13,$Othermisc13a,$Othermisc14,$Othermisc14a,$Othermisc15,$Othermisc15a,$Othermisc16,$Othermisc16a,$Othermisc17,$Othermisc17a,$Othermisc18,$Othermisc18a,$Othermisc19,$Othermisc19a,$Othermisc20,$Othermisc20a,$Othermisc21,$Othermisc21a,$Othermisc22,$Othermisc22a,$Othermisc23,$Othermisc23a,$Othermisc24,$Othermisc24a,$Othermisc25,$Othermisc25a,$Othermisc26,$Othermisc26a,$Othermisc27,$Othermisc27a,$Othermisc28,$Othermisc28a,$Othermisc29,$Othermisc29a,$Othermisc30,$Othermisc30a);
 		
 		$execval = $stmt->execute();
 		
