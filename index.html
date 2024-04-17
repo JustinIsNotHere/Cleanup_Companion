@@ -33,7 +33,7 @@
                     <input type="text"  required/>
                 </div>
                 <div class="input-box">
-                    <label>School or Oragnization You're Affiliated With (Optional):</label>
+                    <label>School or Organization You're Affiliated With (Optional):</label>
                     <input type="text" />
                 </div>
             <div class = "column"> 
@@ -184,7 +184,9 @@
             <header>Volunteer Data Input</header>
             <p align="center"><b style="font-weight: normal;">Enter the amount of each item collected and then increase/decrease the amount using the arrows in the right of each box if you find more.</b></p>
             
-            
+            <div class="form">  
+                <button onclick="toggleInputBoxes1()" class="toggle-btn1" id="toggleButton1">Maximize Plastic Section</button>
+                <div class="input-box1" id="plastic-inputs" style="display: none;">
             <h3 for="metalInputs">Plastic</h3>
             <hr class="line">
             
@@ -264,14 +266,33 @@
                 <input type="number" id="toys" name="toys" min="0">
 
 
-                
+             </div>   
             </div>
         </form>
     </div>
 
+    <script>
+        function toggleInputBoxes1() {
+            const inputBoxes1 = document.getElementById("plastic-inputs");
+            const toggleButton1 = document.getElementById("toggleButton1");
+    
+            if (inputBoxes1.style.display === "none") {
+                inputBoxes1.style.display = "block";
+                toggleButton1.textContent = "Minimize Plastic Section";
+            } else {
+                inputBoxes1.style.display = "none";
+                toggleButton1.textContent = "Maximize Plastic Section";
+            }
+        }
+    
+        toggleInputBoxes();
+    </script>
 
 
-        
+
+    <div class="form">  
+        <button onclick="toggleInputBoxes2()" class="toggle-btn2" id="toggleButton2">Maximize Metal Section</button>
+        <div class="input-box2" id="metal-inputs" style="display: none;">
     
         <h3 for="metalInputs">Metal</h3>
         <hr class="line">
@@ -306,11 +327,33 @@
             <label for="poptabs">Pop Tabs:</label>
             <input type="number" id="poptabs" name="poptabs" min="0">
 
-            
+         </div>   
         </div>
     </form>
 </div>
-    <h3 for="metalInputs">Foam (Styrofoam)</h3>
+
+<script>
+    function toggleInputBoxes2() {
+        const inputBoxes2 = document.getElementById("metal-inputs");
+        const toggleButton2 = document.getElementById("toggleButton2");
+
+        if (inputBoxes2.style.display === "none") {
+            inputBoxes2.style.display = "block";
+            toggleButton2.textContent = "Minimize Metal Section";
+        } else {
+            inputBoxes2.style.display = "none";
+            toggleButton2.textContent = "Maximize Metal Section";
+        }
+    }
+
+    toggleInputBoxes();
+</script>
+
+
+<div class="form">  
+    <button onclick="toggleInputBoxes3()" class="toggle-btn3" id="toggleButton3">Maximize Foam Section</button>
+    <div class="input-box3" id="foam-inputs" style="display: none;">
+            <h3 for="metalInputs">Foam (Styrofoam)</h3>
     <hr class="line">
     
     <form action="#" class="form">
@@ -337,15 +380,32 @@
 
         <label for="trays">Foam Trays:</label>
         <input type="number" id="trays" name="trays" min="0">
-    
+    </div>
     </div>
 </form>
 </div>
 
+<script>
+    function toggleInputBoxes3() {
+        const inputBoxes3 = document.getElementById("foam-inputs");
+        const toggleButton3 = document.getElementById("toggleButton3");
+
+        if (inputBoxes3.style.display === "none") {
+            inputBoxes3.style.display = "block";
+            toggleButton3.textContent = "Minimize Foam Section";
+        } else {
+            inputBoxes3.style.display = "none";
+            toggleButton3.textContent = "Maximize Foam Section";
+        }
+    }
+
+    toggleInputBoxes();
+</script>
+
 
 <div class="form">  
     <button onclick="toggleInputBoxes()" class="toggle-btn" id="toggleButton">Maximize Paper Section</button>
-        <div class="input-box4" id="paper-inputs">
+    <div class="input-box4" id="paper-inputs" style="display: none;">
     
         <h3 for="metalInputs">Paper</h3>
     <hr class="line">
@@ -410,7 +470,11 @@
 </script>
 
 
-<h3 for="metalInputs">Other Miscellaneous Items</h3>
+<div class="form">  
+    <button onclick="toggleInputBoxes5()" class="toggle-btn5" id="toggleButton5">Maximize Miscellaneous Section</button>
+    <div class="input-box5" id="misc-inputs" style="display: none;">
+
+<h3 for="metalInputs">Miscellaneous Items</h3>
 <hr class="line">
     <form action="#" class="form">
         <div class = "column">
@@ -450,19 +514,36 @@
         <input type="number" id="glass" name="glass" min="0"> 
 
         
-    
+    </div>
     </div>
 </form>
 </div>
 
-<h3 for="metalInputs">Other Items Not Listed Above</h3>
+<script>
+    function toggleInputBoxes5() {
+        const inputBoxes5 = document.getElementById("misc-inputs");
+        const toggleButton5 = document.getElementById("toggleButton5");
+
+        if (inputBoxes5.style.display === "none") {
+            inputBoxes5.style.display = "block";
+            toggleButton5.textContent = "Minimize Miscellaneous Section";
+        } else {
+            inputBoxes5.style.display = "none";
+            toggleButton5.textContent = "Maximize Miscellaneous Section";
+        }
+    }
+
+    toggleInputBoxes();
+</script>
+
+<h3 for="metalInputs">Other</h3>
 <hr class="line">
 
 <form action="#" class="form">
     <div class="column">
         <div class="input-box">
             <div class="textinput5" id="textInputContainer5">
-                <label for="customtext5">Other Miscellaneous:</label>
+                <label for="customtext5">Add More:</label>
                 <input type="text" placeholder="Enter another item if it isn't listed" id="customtext5" name="customtext5">
             </div>
             <button id="addMoreButton5">Add More</button>
@@ -475,6 +556,8 @@
         </div>
     </div>
 </form>
+
+
 
 
 

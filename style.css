@@ -149,24 +149,20 @@ fieldset {
 }
 
 button {
+  padding: 16px;
+  font-size: 16px;
   margin-top: 10px;
   border-radius: 12px;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  border-width: 1px;
-  border-color: #939090;
-  padding: 10px 15px;
+  border-color: rgb(204, 229, 255);
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 12px;
-  transition-duration: 0.4s;
   cursor: pointer;
+  background-color: rgb(204, 229, 255);
+
 }
 
-button:hover {
-  background-color: rgb(204, 229, 255);
-}
+
 
 
 #topRightText {
@@ -191,13 +187,67 @@ button:hover {
   font-size: 16px;
   border: none;
   cursor: pointer;
+  width: 100%;
+
 }
 
 .input-box4 {
-  display: none; /* Initially hidden */
+  display: block; /* Initially visible */
+}
+.input-box3 {
+  display: block; /* Initially visible */
+}
+.toggle-btn3 {
+  background-color: rgb(204, 229, 255);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 }
 
+.input-box2 {
+  display: block; /* Initially visible */
+}
+.toggle-btn2 {
+  background-color: rgb(204, 229, 255);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
 
+}
+
+.input-box1 {
+  display: block; /* Initially visible */
+}
+.toggle-btn1 {
+  background-color: rgb(204, 229, 255);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+.input-box5 {
+  display: block; /* Initially visible */
+}
+.toggle-btn5 {
+  background-color: rgb(204, 229, 255);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
 
 
 /*Responsive */
