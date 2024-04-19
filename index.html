@@ -182,39 +182,98 @@
            
             <fieldset>
             <header>Volunteer Data Input</header>
-            <p align="center"><b style="font-weight: normal;">Enter the amount of each item collected and then increase/decrease the amount using the arrows in the right of each box if you find more.</b></p>
+            <p align="center"><b style="font-weight: normal;"> Click the maximize button to see the items for each category (click it again to minimize the section if needed). Enter the amount of each item collected and then increase/decrease the amount using the arrows in the right of each box if you find more.</b></p>
             
+            
+
             <div class="form">  
-                <button onclick="toggleInputBoxes1()" class="toggle-btn1" id="toggleButton1">Maximize Plastic Section</button>
-                <div class="input-box1" id="plastic-inputs" style="display: none;">
-            <h3 for="metalInputs">Plastic</h3>
+                <button onclick="toggleInputBoxes0()" class="toggle-btn0" id="toggleButton0">Maximize Most Common Items Section</button>
+                <div class="input-box0" id="common-inputs" style="display: none;">
+            
+            <h3 for="metalInputs">Most Common Items</h3>
             <hr class="line">
+                <form action="#" class="form">
+                    <div class = "column">
+                    <div class="input-box">
+                    <label for="cigar">Cigarette Butts:</label>
+                    <input type="number" id="cigar" name="cigar" min="0">
+                
+                    <label for="pbottle">Plastic Beverage Bottles:</label>
+                    <input type="number" id="pbottle" name="pbottle" min="0">
+                
+                    <label for="wrapper">Food Wrappers:</label>
+                    <input type="number" id="wrapper" name="wrapper" min="0">
+                
+                    <label for="ptops">Plastic Bottle Tops:</label>
+                    <input type="number" id="ptops" name="ptops" min="0">
+            
+                    <label for="pbags">Plastic Bags:</label>
+                    <input type="number" id="pbags" name="pbags" min="0">
+            
+                   
+                </div>
+                
+                <div class="input-box">
+                    <label for="fcontainers">Foam Food Containers:</label>
+                    <input type="number" id="fcontainers" name="fcontainers" min="0">
+                
+                    <label for="pcontainers">Plastic Food Containers:</label>
+                    <input type="number" id="pcontainers" name="pcontainers" min="0">
+                
+                    <label for="straws">Plastic Straws and Stirrers:</label>
+                    <input type="number" id="straws" name="straws" min="0">
+                
+                    <label for="cans">Beverage Cans:</label>
+                    <input type="number" id="cans" name="cans" min="0">
+                    
+                    <label for="utensils">Plastic Utensils:</label>
+                    <input type="number" id="utensils" name="utensils" min="0"> 
+            
+                    
+                </div>
+                </div>
+            </form>
+            </div>
+            
+            <script>
+                function toggleInputBoxes0() {
+                    const inputBoxes0= document.getElementById("common-inputs");
+                    const toggleButton0= document.getElementById("toggleButton0");
+            
+                    if (inputBoxes0.style.display === "none") {
+                        inputBoxes0.style.display = "block";
+                        toggleButton0.textContent = "Minimize Most Common Items Section";
+                    } else {
+                        inputBoxes0.style.display = "none";
+                        toggleButton0.textContent = "Maximize Most Common Items Section";
+                    }
+                }
+            
+                toggleInputBoxes();
+            </script>
+
+<div class="form">  
+    <button onclick="toggleInputBoxes1()" class="toggle-btn1" id="toggleButton1">Maximize Plastic Section</button>
+    <div class="input-box1" id="plastic-inputs" style="display: none;">
+<h3 for="metalInputs">Plastic</h3>
+<hr class="line">
             
             <form action="#" class="form">
                 <div class = "column">
                 <div class="input-box">
                 
-                <label for="waterbottles">Water Bottles:</label>
-                <input type="number" id="waterbottles" name="waterbottles" min="0">
+                <label for="pcups">Plastic Cups:</label>
+                <input type="number" id="pcups" name="pcups" min="0">
             
-                <label for="bottlecaps">Bottle Caps:</label>
-                <input type="number" id="bottlecaps" name="bottlecaps" min="0">
 
                 <label for="lids">Lids:</label>
                 <input type="number" id="lids" name="lids" min="0">
             
-                <label for="cigarettes">Cigarettes:</label>
-                <input type="number" id="cigarettes" name="cigarettes" min="0">
             
                 <label for="ecigarettes">E-Cigarettes (Vapes):</label>
                 <input type="number" id="ecigarettes" name="ecigarettes" min="0">
             
 
-                <label for="plasticutensils">Plastic Utensils:</label>
-                <input type="number" id="plasticutensils" name="plasticutensils" min="0">
-            
-                <label for="plasticbags">Plastic Bags:</label>
-                <input type="number" id="plasticbags" name="plasticbags" min="0">
             
                 <label for="lighter">Lighters:</label>
                 <input type="number" id="lighter" name="lighter" min="0">
@@ -232,9 +291,7 @@
             </div>
             
             <div class="input-box">
-                <label for="candywrappers">Candy/Food Wrappers:</label>
-                <input type="number" id="candywrappers" name="candywrappers" min="0">
-            
+    
                 <label for="caprings">Bottle Cap Rings:</label>
                 <input type="number" id="caprings" name="caprings" min="0">
 
@@ -247,17 +304,9 @@
                 <label for="nets">Plastic Nets:</label>
                 <input type="number" id="nets" name="nets" min="0">
 
-                <label for="containers">Plastic Take-out Containers:</label>
-                <input type="number" id="containers" name="containers" min="0">
-        
-                <label for="flosspicks">Floss Picks:</label>
-                <input type="number" id="flosspicks" name="flosspicks" min="0">
             
                 <label for="syringes">Syringes:</label>
                 <input type="number" id="syringes" name="syringes" min="0">
-
-                <label for="pstraws">Plastic Straws:</label>
-                <input type="number" id="pstraws" name="pstraws" min="0">
 
                 <label for="holders">6-Pack Holders:</label>
                 <input type="number" id="holders" name="holders" min="0">
@@ -302,12 +351,9 @@
             <label for="batteries">Batteries:</label>
             <input type="number" id="batteries" name="batteries" min="0">
         
-            <label for="bottlecaps">Bottle Caps:</label>
+            <label for="bottlecaps">Glass Bottle Caps:</label>
             <input type="number" id="bottlecaps" name="bottlecaps" min="0">
-        
-            <label for="cans">Cans:</label>
-            <input type="number" id="cans" name="cans" min="0">
-        
+
             <label for="fishinghooks">Fishing Hooks:</label>
             <input type="number" id="fishinghooks" name="fishinghooks" min="0">
             
@@ -324,9 +370,6 @@
             <label for="wire">Wire:</label>
             <input type="number" id="wire" name="wire" min="0">
         
-            <label for="poptabs">Pop Tabs:</label>
-            <input type="number" id="poptabs" name="poptabs" min="0">
-
          </div>   
         </div>
     </form>
@@ -362,10 +405,8 @@
         <label for="foamcup">Foam Cup:</label>
         <input type="number" id="foamcup" name="foamcup" min="0">
     
-        <label for="foampacking">Foam Packaging Material:</label>
-        <input type="number" id="foampacking" name="foampacking" min="0">
     
-        <label for="foampieces">Foam Pieces:</label>
+        <label for="foampieces">Foam Pieces (Big or Small):</label>
         <input type="number" id="foampieces" name="foampieces" min="0">
 
         
@@ -374,9 +415,6 @@
     <div class="input-box">
         <label for="foamplates">Foam Plates:</label>
         <input type="number" id="foamplates" name="foamplates" min="0">
-    
-        <label for="foamcontainers">Foam Take-out Containers:</label>
-        <input type="number" id="foamcontainers" name="foamcontainers" min="0">
 
         <label for="trays">Foam Trays:</label>
         <input type="number" id="trays" name="trays" min="0">

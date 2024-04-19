@@ -149,16 +149,15 @@ fieldset {
 }
 
 button {
+  background-color: rgb(204, 229, 255);
+  color: black;
   padding: 16px;
   font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
   margin-top: 10px;
   border-radius: 12px;
-  border-color: rgb(204, 229, 255);
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-  background-color: rgb(204, 229, 255);
 
 }
 
@@ -175,8 +174,8 @@ button {
   padding: 10px;
 }
 
-#addMoreButton1, #addMoreButton2, #addMoreButton3, #addMoreButton4,  #addMoreButton5 {
-  width: 200%;     
+#addMoreButton5 {
+  width: 205%;     
 }
 
 
@@ -249,6 +248,19 @@ button {
 
 }
 
+.input-box0 {
+  display: block; /* Initially visible */
+}
+.toggle-btn0 {
+  background-color: rgb(204, 229, 255);
+  color: black;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+
+}
 
 /*Responsive */
 @media screen and (max-width: 500px) {
