@@ -1,5 +1,10 @@
 <?php
 
+$host = 'localhost'; 
+$username = 'Justin@'; 
+$password = 'your_password'; 
+$database = 'your_database'; // Your database name
+
 	#defined the global vars, which will be used in the mysql db.
 	global $Name;
 	global $Email;
@@ -174,48 +179,46 @@
 	$Hairties = $_POST['hairties'];
 	$Pen = $_POST['pen'];
 	$Ribbon = $_POST['ribbon'];
-	$candywrappers = $_POST['candywrappers'];
-	$caprings = $_POST['caprings'];
-	$fishingline = $_POST['fishingline'];
+	$Candywrappers = $_POST['candywrappers'];
+	$Caprings = $_POST['caprings'];
+	$Fishingline = $_POST['fishingline'];
 	$Lures = $_POST['lures'];
-	$nets = $_POST['nets'];
-	$containers= $_POST['containers'];
-	$flosspicks= $_POST['flosspicks'];
-	$syringes= $_POST['syringes'];
-	$pstraws= $_POST['pstraws'];
-	$holders = $_POST['holders'];
-	$toys= $_POST['toys'];
-	$batteries = $_POST['batteries'];
-	$metalbottlecaps= $_POST['metalbottlecaps'];
-	$metalcans= $_POST['metalcans'];
-	$fishhooks= $_POST['fishhooks'];	
-	$foil = $_POST['foil'];
-	$nails = $_POST['wire'];
-	$wire = $_POST['nails'];
-	$poptabs = $_POST['poptabs'];
-	$foamcup = $_POST['foamcups'];
-	$foampacking = $_POST['foampacking'];
-	$foampieces = $_POST['foampieces'];
-	
-	$foamplates = $_POST['foamplates'];
-	$foamcontainers = $_POST['foamcontainers'];
-	$trays = $_POST['trays'];
-	$cardboard = $_POST['cardboard'];
-	$papercups = $_POST['cups'];
-	$newspaper = $_POST['newspaper'];
-	$paperbags = $_POST['paperbags'];
-	$receipts = $_POST['receipts'];
-	
-	$paperplates = $_POST['paperplates'];
-	$magazines = $_POST['magazines'];
-	$paperpieces = $_POST['paperpieces'];
-	$paperstraws = $_POST['paperstraws'];
-	$napkins= $_POST['napkins'];
-	$clothing= $_POST['clothing'];
-	$shoes= $_POST['shoes'];
-	$towels= $_POST['towels'];
-	$sticks= $_POST['sticks'];
-	$wood= $_POST['wood'];
+	$Nets = $_POST['nets'];
+	$Containers= $_POST['containers'];
+	$Flosspicks= $_POST['flosspicks'];
+	$Syringes= $_POST['syringes'];
+	$Pstraws= $_POST['pstraws'];
+	$Holders = $_POST['holders'];
+	$Toys= $_POST['toys'];
+	$Batteries = $_POST['batteries'];
+	$Metalbottlecaps= $_POST['metalbottlecaps'];
+	$Metalcans= $_POST['metalcans'];
+	$Fishhooks= $_POST['fishhooks'];	
+	$Foil = $_POST['foil'];
+	$Nails = $_POST['wire'];
+	$Wire = $_POST['nails'];
+	$Poptabs = $_POST['poptabs'];
+	$Foamcup = $_POST['foamcups'];
+	$Foampacking = $_POST['foampacking'];
+	$Foampieces = $_POST['foampieces'];
+	$Foamplates = $_POST['foamplates'];
+	$Foamcontainers = $_POST['foamcontainers'];
+	$Trays = $_POST['trays'];
+	$Cardboard = $_POST['cardboard'];
+	$Papercups = $_POST['cups'];
+	$Newspaper = $_POST['newspaper'];
+	$Paperbags = $_POST['paperbags'];
+	$Receipts = $_POST['receipts'];
+	$Paperplates = $_POST['paperplates'];
+	$Magazines = $_POST['magazines'];
+	$Paperpieces = $_POST['paperpieces'];
+	$Paperstraws = $_POST['paperstraws'];
+	$Napkins= $_POST['napkins'];
+	$Clothing= $_POST['clothing'];
+	$Shoes= $_POST['shoes'];
+	$Towels= $_POST['towels'];
+	$Sticks= $_POST['sticks'];
+	$Wood= $_POST['wood'];
 	
 	$Balloon= $_POST['balloon'];
 	$Tire= $_POST['tire'];
@@ -293,11 +296,7 @@
 	} else {
 
 		$stmt = $conn->prepare("Enter into the form if applicable (name, email, hometown, zipcode, date, states, sitename, sitecity, sitecounty, cleanuptype, waterbottles, bottlecaps, lids, cigarettes, ecigarettes, plasticutensils, plasticbags, lighter, hairties, pen, ribbon, candywrappers, caprings, fishingline, lures, nets, containers, flosspicks, syringes, pstraws, holders, toys, batteries, metalbottlecaps, metalcans, fishhooks, foil, wire, nails, poptabs, foamcups, foampacking, foampieces, foamplates, foamcontainers, trays, cardboard, cups, newspaper, paperbags, receipts, paperplates, magazines, paperstraws, napkins, clothing, shoes, towels, sticks, wood, balloon, tire, gloves, glassbottle, glass
-		customtext1,customtext1a,customtext2,customtext2a,customtext3,customtext3a,customtext4,customtext4a,customtext5,customtext5a,customtext6,customtext6a,customtext7,customtext7a,customtext8,customtext8a,customtext9,customtext9a,customtext10,customtext10a,
-
-		
-		)
-		
+		customtext1,customtext1a,customtext2,customtext2a,customtext3,customtext3a,customtext4,customtext4a,customtext5,customtext5a,customtext6,customtext6a,customtext7,customtext7a,customtext8,customtext8a,customtext9,customtext9a,customtext10,customtext10a)
 		values(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,)");
 		#Add the code below in the prepare command
 		# customtext11,customtext11a,customtext12,customtext12a,customtext13,customtext13a,customtext14,customtext14a,customtext15,customtext15a,customtext16,customtext16a,customtext17,customtext17a,customtext18,customtext18a,customtext19,customtext19a,customtext20,customtext20a,customtext21,customtext21a,customtext22,customtext22a,customtext23,customtext23a,customtext24,customtext24a,customtext25,customtext25a,customtext26,customtext26a,customtext27,customtext27a,customtext28,customtext28a,customtext29,customtext29a,customtext30,customtext30a,
@@ -310,8 +309,8 @@
 		$Trays, $Cardboard, $Cups, $Newspaper, $Paperbags, $Receipts, $Paperplates,
 		$Magazines, $Paperpieces, $Paperstraws, $Napkins, $Clothing, $Shoes, $Towels, $Sticks, 
 		$wood, $Othermisc1, $Othermisc1a, $Balloon, $Tire, $Gloves, $Glassbottle, $Glass);
-		$stmt = $conn->prepare("Enter into the form if applicable (name,email,htown,zip,date,states,sitename,sitecounty,cleanuptype,waterbottles,bottlecaps,lids,cigarettes,ecigarettes,plasticutensils,plasticbags,lighter,hairties,pen,ribbon,candywrappers,caprings,fishingline,Lures,nets,containers,flosspicks,syringes,pstraws,holders,toys,batteries,metalbottlecaps,netalcans,fishhooks,foil,wire,nails,poptabs,foamcups,foampacking,foampieces,foamplates,foamcontainers,trays,cardboard,cups,newspaper,paperbags,receipts,paperplates,magazines,paperpieces,paperstraws,napkins,clothing,shoes,towels,sticks,wood,balloon,tire,gloves,glassbottle,glass,customtext1,customtext1a,customtext2,customtext2a,customtext3,customtext3a,customtext4,customtext4a,customtext5,customtext5a,customtext6,customtext6a,customtext7,customtext7a,customtext8,customtext8a,customtext9,customtext9a,customtext10,customtext10a,customtext11,customtext11a,customtext12,customtext12a,customtext13,customtext13a,customtext14,customtext14a,customtext15,customtext15a,customtext16,customtext16a,customtext17,customtext17a,customtext18,customtext18a,customtext19,customtext19a,customtext20,customtext20a,customtext21,customtext21a,customtext22,customtext22a,customtext23,customtext23a,customtext24,customtext24a,customtext25,customtext25a,customtext26,customtext26a,customtext27,customtext27a,customtext28,customtext28a,customtext29,customtext29a,customtext30,customtext30a) 
-		values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
+		#$stmt = $conn->prepare("Enter into the form if applicable (name,email,htown,zip,date,states,sitename,sitecounty,cleanuptype,waterbottles,bottlecaps,lids,cigarettes,ecigarettes,plasticutensils,plasticbags,lighter,hairties,pen,ribbon,candywrappers,caprings,fishingline,Lures,nets,containers,flosspicks,syringes,pstraws,holders,toys,batteries,metalbottlecaps,netalcans,fishhooks,foil,wire,nails,poptabs,foamcups,foampacking,foampieces,foamplates,foamcontainers,trays,cardboard,cups,newspaper,paperbags,receipts,paperplates,magazines,paperpieces,paperstraws,napkins,clothing,shoes,towels,sticks,wood,balloon,tire,gloves,glassbottle,glass,customtext1,customtext1a,customtext2,customtext2a,customtext3,customtext3a,customtext4,customtext4a,customtext5,customtext5a,customtext6,customtext6a,customtext7,customtext7a,customtext8,customtext8a,customtext9,customtext9a,customtext10,customtext10a,customtext11,customtext11a,customtext12,customtext12a,customtext13,customtext13a,customtext14,customtext14a,customtext15,customtext15a,customtext16,customtext16a,customtext17,customtext17a,customtext18,customtext18a,customtext19,customtext19a,customtext20,customtext20a,customtext21,customtext21a,customtext22,customtext22a,customtext23,customtext23a,customtext24,customtext24a,customtext25,customtext25a,customtext26,customtext26a,customtext27,customtext27a,customtext28,customtext28a,customtext29,customtext29a,customtext30,customtext30a) 
+		#values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)");
 		
 		#$stmt->bind_param("sssssi", $Name, $Email, $Htown, $Zip, $Date, $States, $Sitename, $Sitecounty, $Cleanuptype, $Waterbottles, $Bottlecaps, $Lids, $Cigarettes, $Ecigarettes, $Plasticutensils, $Plasticbags, $Lighter, $Hairties, $Pen, $Ribbon, $Candywrappers, $Caprings, $Fishingline, $Lures, $Nets, $Containers, $Flosspicks, $Syringes, $Pstraws, $Holders, $Toys, $Batteries, $Metalbottlecaps, $Metalcans, $Fishhooks, $Foil, $Wire, $Nails, $Poptabs, $Foamcups, $Foampacking, $Foampieces, $Foamplates, $Foamcontainers, $Trays, $Cardboard, $Cups, $Newspaper, $Paperbags, $Receipts, $Paperplates,$Magazines, $Paperpieces, $Paperstraws, $Napkins, $Clothing, $Shoes, $Towels, $Sticks, $Wood, $Balloon, $Tire, $Gloves, $Glassbottle, $Glass, $Othermisc1,$Othermisc1a,$Othermisc2,$Othermisc2a,$Othermisc3,$Othermisc3a,$Othermisc4,$Othermisc4a,$Othermisc5,$Othermisc5a,$Othermisc6,$Othermisc6a,$Othermisc7,$Othermisc7a,$Othermisc8,$Othermisc8a,$Othermisc9,$Othermisc9a,$Othermisc10,$Othermisc10a, $Othermisc11, $Othermisc11a,$Othermisc12,$Othermisc12a,$Othermisc13,$Othermisc13a,$Othermisc14,$Othermisc14a,$Othermisc15,$Othermisc15a,$Othermisc16,$Othermisc16a,$Othermisc17,$Othermisc17a,$Othermisc18,$Othermisc18a,$Othermisc19,$Othermisc19a,$Othermisc20,$Othermisc20a,$Othermisc21,$Othermisc21a,$Othermisc22,$Othermisc22a,$Othermisc23,$Othermisc23a,$Othermisc24,$Othermisc24a,$Othermisc25,$Othermisc25a,$Othermisc26,$Othermisc26a,$Othermisc27,$Othermisc27a,$Othermisc28,$Othermisc28a,$Othermisc29,$Othermisc29a,$Othermisc30,$Othermisc30a);
 		
