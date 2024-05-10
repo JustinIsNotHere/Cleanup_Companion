@@ -1,5 +1,5 @@
 <?php
-
+ #test
 	#defined the global vars, which will be used in the mysql db.
 	global $Name;
 	global $Email;
