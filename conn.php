@@ -1,9 +1,9 @@
 <?php
 
 $host = 'localhost'; 
-$username = 'Justin@'; 
-$password = 'your_password'; 
-$database = 'your_database'; // Your database name
+$username = 'gleavitt11'; 
+$password = 'Ozzie@18345.'; 
+$database = 'CleanupCompanion'; // Your database name
 
 #test#2
 	#defined the global vars, which will be used in the mysql db.
